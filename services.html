@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事業内容 | 合同会社Honest</title>
+    <meta name="description" content="合同会社Honestの事業内容：営業サポート事業、アライアンス事業、買取事業を通じて、お客様のビジネス成長をサポートします。">
+    <meta name="keywords" content="営業サポート,アライアンス事業,買取事業,ブランド品買取,機械式時計,ビジネスソリューション">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="事業内容 | 合同会社Honest">
+    <meta property="og:description" content="営業サポート事業、アライアンス事業、買取事業を通じてお客様のビジネス成長をサポート。">
+    <meta property="og:url" content="https://k-honest.com/services.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="合同会社Honest">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://k-honest.com/Honestロゴ%20(2).png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="事業内容 | 合同会社Honest">
+    <meta name="twitter:description" content="営業サポート事業、アライアンス事業、買取事業を展開。">
+    <meta name="twitter:image" content="https://k-honest.com/Honestロゴ%20(2).png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="japanese-page-styles.css">
+    <script src="japanese-animations.js"></script>
+    <style>
+        .page-hero {
+            min-height: 50vh;
+            background: linear-gradient(135deg, #f8fafb 0%, #e8f4f8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .service-detail {
+            padding: 100px 0;
+            background: var(--bg-white);
+        }
+
+        .service-detail:nth-child(even) {
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        }
+
+        .service-main-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 5rem;
+            transition: var(--transition);
+        }
+
+        .service-main-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(111, 187, 211, 0.15);
+        }
+
+        .service-main-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-main-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .service-number {
+            font-family: var(--font-english);
+            font-size: 5rem;
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .service-main-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .service-main-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .service-main-body {
+            padding: 3rem;
+        }
+
+        .service-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-medium);
+            margin-bottom: 3rem;
+        }
+
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-item {
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            background: white;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .feature-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-process {
+            margin: 4rem 0;
+        }
+
+        .process-title {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .process-step:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+        }
+
+        .step-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-examples {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+
+        .examples-title {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .example-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .example-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .example-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+            padding: 16px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* ハンバーガーメニュー - indexと同じコード */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--sumi);
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Mobile line breaks - hidden by default on desktop */
+        br.mobile-break {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            /* Show mobile breaks on mobile */
+            br.mobile-break {
+                display: inline;
+            }
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--shiro);
+                width: 100%;
+                padding: 2rem 0;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                gap: 0;
+                z-index: 1001;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                padding: 1rem 2rem;
+                display: block;
+            }
+
+            /* セクションpadding調整 */
+            .service-detail,
+            .cta-section {
+                padding: 3rem 0 !important;
+            }
+
+            /* メインカード調整 */
+            .service-main-header {
+                padding: 2rem 1.5rem !important;
+            }
+
+            .service-main-body {
+                padding: 2rem 1.5rem !important;
+            }
+
+            .service-main-title {
+                font-size: 1.8rem;
+            }
+
+            .service-main-subtitle {
+                font-size: 0.95rem !important;
+            }
+
+            .service-number {
+                font-size: 3rem;
+            }
+
+            .service-description {
+                font-size: 1rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .service-features {
+                grid-template-columns: 1fr;
+                gap: 1.5rem !important;
+                margin: 2rem 0 !important;
+            }
+
+            .feature-item {
+                padding: 1.5rem !important;
+            }
+
+            .service-process {
+                margin: 2.5rem 0 !important;
+            }
+
+            .process-title {
+                font-size: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 1.5rem !important;
+            }
+
+            .process-step {
+                padding: 1.2rem !important;
+            }
+
+            .service-examples {
+                padding: 2rem 1.5rem !important;
+                margin: 2rem 0 !important;
+            }
+
+            .examples-title {
+                font-size: 1.3rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .example-list {
+                grid-template-columns: 1fr;
+                gap: 1.2rem !important;
+            }
+
+            .example-item {
+                padding: 1.2rem !important;
+            }
+
+            .example-item h4 {
+                font-size: 1.1rem !important;
+            }
+
+            .example-item p {
+                font-size: 0.85rem !important;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-description {
+                font-size: 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-detail,
+            .cta-section {
+                padding: 2.5rem 0 !important;
+            }
+
+            .service-main-header {
+                padding: 1.5rem 1rem !important;
+            }
+
+            .service-main-body {
+                padding: 1.5rem 1rem !important;
+            }
+
+            .service-main-title {
+                font-size: 1.5rem;
+            }
+
+            .service-number {
+                font-size: 2.5rem;
+            }
+
+            .cta-title {
+                font-size: 1.5rem;
+            }
+
+            .cta-description {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- カスタムカーソル -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <img src="Honestロゴ (2).png" alt="Honest" style="height: 50px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">ホーム</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">事業内容</a></li>
+                    <li class="nav-item"><a href="message.html" class="nav-link">代表メッセージ</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ページヒーロー -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1 class="page-hero-title">
+                <span style="display: inline-block; animation: fadeInUp 0.8s ease forwards;">事</span>
+                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.1s forwards; opacity: 0;">業</span>
+                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0;">内</span>
+                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.3s forwards; opacity: 0;">容</span>
+            </h1>
+            <p class="page-hero-subtitle">Our Services</p>
+        </div>
+    </section>
+
+    <!-- 営業サポート事業 -->
+    <section id="sales-support" class="service-detail">
+        <div class="container">
+            <div class="service-main-card animate-on-scroll">
+                <div class="service-main-header">
+                    <span class="service-number">01</span>
+                    <h2 class="service-main-title">営業サポート事業</h2>
+                    <p class="service-main-subtitle">Sales Support Service</p>
+                </div>
+                <div class="service-main-body">
+                    <p class="service-description">
+                        中小企業の営業力強化をトータルサポート。経験豊富な営業プロフェッショナルが、
+                        お客様の営業戦略立案から実行まで、包括的な支援を提供します。
+                        新規開拓、既存顧客の深耕、営業プロセスの最適化まで、あらゆる営業課題に対応します。
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <div class="feature-title">営業戦略立案</div>
+                            <p>市場分析に基づく効果的な営業戦略の策定</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-title">新規開拓支援</div>
+                            <p>ターゲット企業へのアプローチから商談まで</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📈</div>
+                            <div class="feature-title">営業プロセス改善</div>
+                            <p>効率的な営業フローの構築と改善</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">👥</div>
+                            <div class="feature-title">営業研修</div>
+                            <p>営業スキル向上のための実践的研修</p>
+                        </div>
+                    </div>
+
+                    <div class="service-process">
+                        <h3 class="process-title">サービスの流れ</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-title">ヒアリング</div>
+                                <p>現状分析と課題抽出</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-title">戦略立案</div>
+                                <p>最適な営業戦略の策定</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-title">実行支援</div>
+                                <p>戦略の実行と伴走支援</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-title">効果測定</div>
+                                <p>成果の検証と改善提案</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-examples">
+                        <h3 class="examples-title">導入実績</h3>
+                        <div class="example-list">
+                            <div class="example-item">
+                                <h4>IT企業A社</h4>
+                                <p>新規開拓により売上150%達成</p>
+                            </div>
+                            <div class="example-item">
+                                <h4>製造業B社</h4>
+                                <p>営業プロセス改善で効率30%向上</p>
+                            </div>
+                            <div class="example-item">
+                                <h4>サービス業C社</h4>
+                                <p>営業研修により成約率20%アップ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- アライアンス事業 -->
+    <section id="alliance" class="service-detail">
+        <div class="container">
+            <div class="service-main-card animate-on-scroll">
+                <div class="service-main-header">
+                    <span class="service-number">02</span>
+                    <h2 class="service-main-title">アライアンス事業</h2>
+                    <p class="service-main-subtitle">Strategic Alliance Service</p>
+                </div>
+                <div class="service-main-body">
+                    <p class="service-description">
+                        企業間の戦略的提携をコーディネート。異業種・同業種問わず、
+                        シナジーを生み出す最適なパートナーシップを構築します。
+                        事業拡大、新市場開拓、技術連携など、様々な目的に応じたアライアンスを実現します。
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🤝</div>
+                            <div class="feature-title">パートナーマッチング</div>
+                            <p>最適な提携先の発掘とマッチング</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📝</div>
+                            <div class="feature-title">契約交渉支援</div>
+                            <p>Win-Winな契約条件の調整</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚀</div>
+                            <div class="feature-title">事業開発</div>
+                            <p>共同事業の企画・推進支援</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🌐</div>
+                            <div class="feature-title">ネットワーク構築</div>
+                            <p>持続的な事業連携の仕組み作り</p>
+                        </div>
+                    </div>
+
+                    <div class="service-process">
+                        <h3 class="process-title">アライアンス構築プロセス</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-title">戦略策定</div>
+                                <p>提携目的と方針の明確化</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-title">パートナー選定</div>
+                                <p>候補企業の調査と評価</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-title">交渉・契約</div>
+                                <p>条件交渉と契約締結</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-title">実行・管理</div>
+                                <p>提携事業の推進と管理</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-examples">
+                        <h3 class="examples-title">成功事例</h3>
+                        <div class="example-list">
+                            <div class="example-item">
+                                <h4>技術提携</h4>
+                                <p>AI企業とメーカーの技術連携を実現</p>
+                            </div>
+                            <div class="example-item">
+                                <h4>販売提携</h4>
+                                <p>異業種間での相互送客スキーム構築</p>
+                            </div>
+                            <div class="example-item">
+                                <h4>海外展開</h4>
+                                <p>現地企業との合弁事業立ち上げ支援</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 買取事業 -->
+    <section id="purchase" class="service-detail">
+        <div class="container">
+            <div class="service-main-card animate-on-scroll">
+                <div class="service-main-header">
+                    <span class="service-number">03</span>
+                    <h2 class="service-main-title">買取事業</h2>
+                    <p class="service-main-subtitle">Luxury Goods Purchase Service</p>
+                </div>
+                <div class="service-main-body">
+                    <p class="service-description">
+                        ブランド品、高級時計、ジュエリーなどの高価買取サービス。
+                        専門の鑑定士が適正価格で査定し、スピーディーな買取を実現します。
+                        法人様の在庫処分から個人様の資産売却まで、幅広いニーズに対応いたします。
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">💎</div>
+                            <div class="feature-title">高額査定</div>
+                            <p>市場価値に基づく適正価格での買取</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-title">即日現金化</div>
+                            <p>査定後、その場で現金お支払い</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔍</div>
+                            <div class="feature-title">専門鑑定</div>
+                            <p>経験豊富な鑑定士による確かな査定</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚪</div>
+                            <div class="feature-title">出張買取</div>
+                            <p>ご自宅や指定場所での買取対応</p>
+                        </div>
+                    </div>
+
+                    <div class="service-process">
+                        <h3 class="process-title">買取の流れ</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-title">お問い合わせ</div>
+                                <p>電話・メールでご相談</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-title">査定</div>
+                                <p>無料査定で価格提示</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-title">ご検討</div>
+                                <p>査定額をご確認</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-title">お支払い</div>
+                                <p>即日現金でお支払い</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-examples">
+                        <h3 class="examples-title">買取対象品目</h3>
+                        <div class="example-list">
+                            <div class="example-item">
+                                <h4>ブランドバッグ</h4>
+                                <p>エルメス、シャネル、ルイヴィトン等</p>
+                            </div>
+                            <div class="example-item">
+                                <h4>高級時計</h4>
+                                <p>ロレックス、オメガ、パテックフィリップ等</p>
+                            </div>
+                            <div class="example-item">
+                                <h4>ジュエリー</h4>
+                                <p>ダイヤモンド、金、プラチナ製品等</p>
+                            </div>
+                            <div class="example-item">
+                                <h4>その他高級品</h4>
+                                <p>アクセサリー、貴金属、美術品等</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">ビジネスの成長をサポートします</h2>
+            <p class="cta-description">
+                お客様のニーズに合わせた最適なソリューションをご提案いたします
+            </p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn-white">お問い合わせ</a>
+                <a href="tel:03-4500-3763" class="btn-white">📞 03-4500-3763</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="Honestロゴ (2).png" alt="Honest" style="height: 60px; margin-bottom: 1rem; filter: brightness(0) invert(1); opacity: 0.9;">
+                <p style="margin-top: 1rem; opacity: 0.8; line-height: 1.8;">
+                    誠実さと透明性を基盤に、<br>
+                    日本の伝統的な商道徳を大切にしながら、<br>
+                    革新的なビジネスソリューションを提供します。
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>サービス</h4>
+                <ul>
+                    <li><a href="services.html#sales">営業サポート事業</a></li>
+                    <li><a href="services.html#alliance">アライアンス事業</a></li>
+                    <li><a href="services.html#purchase">買取事業</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>企業情報</h4>
+                <ul>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="message.html">代表挨拶</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>お問い合わせ</h4>
+                <p style="opacity: 0.8; line-height: 1.8;">
+                    〒169-0072<br class="mobile-break">
+                    東京都新宿区大久保2-19-15<br class="mobile-break">
+                    TEL: 03-4500-3763<br class="mobile-break">
+                    Email: info@k-honest.com
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 合同会社Honest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

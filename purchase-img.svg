@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- 高級品買取の背景 -->
+  <rect width="400" height="300" fill="#f8f5f0"/>
+
+  <!-- ベルベット風の台座 -->
+  <ellipse cx="200" cy="200" rx="150" ry="50" fill="#8b4513" opacity="0.3"/>
+  <rect x="50" y="180" width="300" height="40" fill="#8b4513" opacity="0.2"/>
+
+  <!-- 高級時計 -->
+  <g transform="translate(120, 120)">
+    <circle cx="0" cy="0" r="40" fill="#ffd700" stroke="#b8860b" stroke-width="3"/>
+    <circle cx="0" cy="0" r="35" fill="white"/>
+    <circle cx="0" cy="0" r="33" fill="#f0f0f0"/>
+
+    <!-- 文字盤の数字 -->
+    <text x="0" y="-20" text-anchor="middle" font-size="8" fill="#2c4f5d">12</text>
+    <text x="20" y="3" text-anchor="middle" font-size="8" fill="#2c4f5d">3</text>
+    <text x="0" y="25" text-anchor="middle" font-size="8" fill="#2c4f5d">6</text>
+    <text x="-20" y="3" text-anchor="middle" font-size="8" fill="#2c4f5d">9</text>
+
+    <!-- 針 -->
+    <line x1="0" y1="0" x2="0" y2="-20" stroke="#2c4f5d" stroke-width="2"/>
+    <line x1="0" y1="0" x2="15" y2="5" stroke="#2c4f5d" stroke-width="2"/>
+    <circle cx="0" cy="0" r="3" fill="#2c4f5d"/>
+
+    <!-- ベルト -->
+    <rect x="-15" y="-45" width="30" height="10" fill="#8b4513"/>
+    <rect x="-15" y="35" width="30" height="10" fill="#8b4513"/>
+  </g>
+
+  <!-- ダイヤモンドリング -->
+  <g transform="translate(280, 120)">
+    <!-- リング部分 -->
+    <ellipse cx="0" cy="10" rx="25" ry="8" fill="none" stroke="#ffd700" stroke-width="4"/>
+
+    <!-- ダイヤモンド -->
+    <g transform="translate(0, -5)">
+      <polygon points="0,-15 15,-5 10,10 0,20 -10,10 -15,-5" fill="#e0f7ff" stroke="#6fbbd3" stroke-width="1"/>
+      <polygon points="0,-15 5,-7 0,-5 -5,-7" fill="white" opacity="0.7"/>
+      <polygon points="15,-5 10,0 12,5" fill="white" opacity="0.5"/>
+
+      <!-- キラキラ効果 -->
+      <g>
+        <circle cx="-20" cy="-10" r="2" fill="white" opacity="0.8"/>
+        <circle cx="20" cy="-5" r="2" fill="white" opacity="0.8"/>
+        <circle cx="-15" cy="5" r="1.5" fill="white" opacity="0.6"/>
+        <circle cx="18" cy="8" r="1.5" fill="white" opacity="0.6"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ブランドバッグ -->
+  <g transform="translate(200, 140)">
+    <rect x="-30" y="0" width="60" height="50" rx="5" fill="#8b4513"/>
+    <rect x="-25" y="5" width="50" height="40" rx="3" fill="#a0522d"/>
+
+    <!-- ブランドロゴ風の装飾 -->
+    <g fill="#ffd700">
+      <circle cx="-10" cy="25" r="3"/>
+      <circle cx="0" cy="25" r="3"/>
+      <circle cx="10" cy="25" r="3"/>
+      <rect x="-12" y="23" width="24" height="4"/>
+    </g>
+
+    <!-- ハンドル -->
+    <path d="M-20,0 Q-20,-15 -10,-15 L10,-15 Q20,-15 20,0" fill="none" stroke="#8b4513" stroke-width="3"/>
+  </g>
+
+  <!-- 光の反射効果 -->
+  <ellipse cx="200" cy="100" rx="120" ry="40" fill="white" opacity="0.3"/>
+
+  <!-- デコレーション効果 -->
+  <circle cx="350" cy="50" r="30" fill="#ffd700" opacity="0.1"/>
+  <circle cx="50" cy="250" r="25" fill="#8b4513" opacity="0.1"/>
+</svg>

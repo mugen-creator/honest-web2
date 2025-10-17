@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- 青海波（せいがいは）パターン -->
+  <pattern id="seigaiha" x="0" y="0" width="80" height="40" patternUnits="userSpaceOnUse">
+    <g fill="none" stroke="#6fbbd3" stroke-width="0.5" opacity="0.3">
+      <path d="M 0 20 Q 10 10, 20 20 T 40 20 T 60 20 T 80 20"/>
+      <path d="M -20 40 Q -10 30, 0 40 T 20 40 T 40 40 T 60 40 T 80 40 T 100 40"/>
+    </g>
+  </pattern>
+
+  <!-- 七宝（しっぽう）パターン -->
+  <pattern id="shippo" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+    <g fill="none" stroke="#a4d4e1" stroke-width="0.5" opacity="0.2">
+      <circle cx="30" cy="0" r="30"/>
+      <circle cx="0" cy="30" r="30"/>
+      <circle cx="60" cy="30" r="30"/>
+      <circle cx="30" cy="60" r="30"/>
+    </g>
+  </pattern>
+
+  <!-- 麻の葉（あさのは）パターン -->
+  <pattern id="asanoha" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+    <g stroke="#6fbbd3" stroke-width="0.3" fill="none" opacity="0.15">
+      <path d="M30,0 L15,26 L0,0 M30,0 L45,26 L60,0 M15,26 L30,52 L45,26 M0,52 L15,26 L30,52 M30,52 L45,26 L60,52"/>
+      <path d="M0,0 L15,26 M60,0 L45,26 M15,26 L0,52 M45,26 L60,52"/>
+    </g>
+  </pattern>
+
+  <!-- 矢絣（やがすり）パターン -->
+  <pattern id="yagasuri" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <g fill="#4a9fb5" opacity="0.1">
+      <path d="M10,0 L20,10 L20,30 L10,40 L0,30 L0,10 Z"/>
+      <path d="M30,0 L40,10 L40,30 L30,40 L20,30 L20,10 Z"/>
+    </g>
+  </pattern>
+
+  <!-- 和風グラデーション -->
+  <linearGradient id="waGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#f8f4e6;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#e8f4f8;stop-opacity:1" />
+  </linearGradient>
+
+  <linearGradient id="waGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#6fbbd3;stop-opacity:1" />
+    <stop offset="50%" style="stop-color:#7dc8d6;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#4a9fb5;stop-opacity:1" />
+  </linearGradient>
+
+  <!-- 雲パターン -->
+  <pattern id="kumo" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+    <g fill="none" stroke="#a4d4e1" stroke-width="1" opacity="0.1">
+      <path d="M20,50 Q40,30 60,50 T100,50 T140,50 T180,50"/>
+      <path d="M0,70 Q20,50 40,70 T80,70 T120,70 T160,70 T200,70"/>
+    </g>
+  </pattern>
+
+  <!-- 松パターン -->
+  <pattern id="matsu" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+    <g stroke="#4a9fb5" stroke-width="0.5" fill="none" opacity="0.15">
+      <path d="M50,20 L40,35 L30,35 L40,50 L30,50 L40,65 L50,65 L60,65 L70,50 L60,50 L70,35 L60,35 Z"/>
+    </g>
+  </pattern>
+
+  <!-- 山形パターン -->
+  <pattern id="yamagata" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+    <g fill="none" stroke="#6fbbd3" stroke-width="0.8" opacity="0.1">
+      <polyline points="0,80 20,60 40,40 60,60 80,80"/>
+      <polyline points="0,40 20,20 40,0 60,20 80,40"/>
+    </g>
+  </pattern>
+</svg>

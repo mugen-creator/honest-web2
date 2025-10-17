@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 営業サポート事業のサムネイル -->
+    <symbol id="sales-thumb" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#f8fafb"/>
+
+      <!-- 背景パターン -->
+      <g opacity="0.1">
+        <path d="M0,150 Q100,100 200,150 T400,150" stroke="#6fbbd3" fill="none" stroke-width="2"/>
+        <path d="M0,180 Q100,130 200,180 T400,180" stroke="#6fbbd3" fill="none" stroke-width="2"/>
+      </g>
+
+      <!-- ビジネスチャート -->
+      <g transform="translate(200, 150)">
+        <!-- 棒グラフ -->
+        <rect x="-80" y="20" width="30" height="60" fill="#a4d4e1" opacity="0.8"/>
+        <rect x="-40" y="0" width="30" height="80" fill="#6fbbd3" opacity="0.8"/>
+        <rect x="0" y="-20" width="30" height="100" fill="#4a9fb5" opacity="0.8"/>
+        <rect x="40" y="-40" width="30" height="120" fill="#2c4f5d" opacity="0.8"/>
+
+        <!-- 上昇矢印 -->
+        <path d="M-60,0 L60,-60" stroke="#4a9fb5" stroke-width="3" fill="none"/>
+        <polygon points="60,-60 55,-55 50,-65" fill="#4a9fb5"/>
+      </g>
+
+      <!-- テキスト -->
+      <text x="200" y="250" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c4f5d">営業力強化</text>
+    </symbol>
+
+    <!-- アライアンス事業のサムネイル -->
+    <symbol id="alliance-thumb" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#f5f9fc"/>
+
+      <!-- 背景の円 -->
+      <g opacity="0.1">
+        <circle cx="200" cy="150" r="120" fill="none" stroke="#6fbbd3" stroke-width="2"/>
+        <circle cx="200" cy="150" r="80" fill="none" stroke="#a4d4e1" stroke-width="2"/>
+      </g>
+
+      <!-- ネットワーク図 -->
+      <g transform="translate(200, 150)">
+        <!-- 中心ノード -->
+        <circle cx="0" cy="0" r="25" fill="#4a9fb5"/>
+
+        <!-- 周辺ノード -->
+        <circle cx="-80" cy="-40" r="20" fill="#6fbbd3"/>
+        <circle cx="80" cy="-40" r="20" fill="#6fbbd3"/>
+        <circle cx="-80" cy="40" r="20" fill="#6fbbd3"/>
+        <circle cx="80" cy="40" r="20" fill="#6fbbd3"/>
+        <circle cx="0" cy="-80" r="20" fill="#6fbbd3"/>
+        <circle cx="0" cy="80" r="20" fill="#6fbbd3"/>
+
+        <!-- 接続線 -->
+        <line x1="0" y1="0" x2="-80" y2="-40" stroke="#a4d4e1" stroke-width="2"/>
+        <line x1="0" y1="0" x2="80" y2="-40" stroke="#a4d4e1" stroke-width="2"/>
+        <line x1="0" y1="0" x2="-80" y2="40" stroke="#a4d4e1" stroke-width="2"/>
+        <line x1="0" y1="0" x2="80" y2="40" stroke="#a4d4e1" stroke-width="2"/>
+        <line x1="0" y1="0" x2="0" y2="-80" stroke="#a4d4e1" stroke-width="2"/>
+        <line x1="0" y1="0" x2="0" y2="80" stroke="#a4d4e1" stroke-width="2"/>
+
+        <!-- ハンドシェイク アイコン -->
+        <g transform="translate(0, 0)">
+          <path d="M-10,0 Q-5,-5 0,0 Q5,-5 10,0" stroke="white" stroke-width="2" fill="none"/>
+        </g>
+      </g>
+
+      <text x="200" y="250" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c4f5d">戦略的提携</text>
+    </symbol>
+
+    <!-- 買取事業のサムネイル -->
+    <symbol id="purchase-thumb" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#faf8f5"/>
+
+      <!-- 背景の和柄 -->
+      <g opacity="0.08">
+        <path d="M100,50 L100,250 M150,50 L150,250 M200,50 L200,250 M250,50 L250,250 M300,50 L300,250" stroke="#8b7355" stroke-width="1"/>
+        <path d="M50,100 L350,100 M50,150 L350,150 M50,200 L350,200" stroke="#8b7355" stroke-width="1"/>
+      </g>
+
+      <!-- ダイヤモンド/宝石 -->
+      <g transform="translate(200, 130)">
+        <!-- ダイヤモンド形状 -->
+        <polygon points="0,-40 30,-20 20,20 0,40 -20,20 -30,-20" fill="#6fbbd3" opacity="0.3"/>
+        <polygon points="0,-40 30,-20 20,20 0,40 -20,20 -30,-20" fill="none" stroke="#4a9fb5" stroke-width="2"/>
+
+        <!-- 光沢効果 -->
+        <polygon points="0,-40 10,-25 0,-20 -10,-25" fill="#a4d4e1" opacity="0.5"/>
+        <polygon points="30,-20 20,-10 25,0" fill="#a4d4e1" opacity="0.5"/>
+
+        <!-- キラキラ効果 -->
+        <g opacity="0.6">
+          <circle cx="-40" cy="-30" r="3" fill="#6fbbd3"/>
+          <circle cx="40" cy="-20" r="2" fill="#a4d4e1"/>
+          <circle cx="-30" cy="30" r="2" fill="#6fbbd3"/>
+          <circle cx="35" cy="25" r="3" fill="#a4d4e1"/>
+        </g>
+      </g>
+
+      <!-- 時計アイコン -->
+      <g transform="translate(120, 150)" opacity="0.4">
+        <circle cx="0" cy="0" r="25" fill="none" stroke="#8b7355" stroke-width="2"/>
+        <line x1="0" y1="0" x2="0" y2="-15" stroke="#8b7355" stroke-width="2"/>
+        <line x1="0" y1="0" x2="10" y2="5" stroke="#8b7355" stroke-width="2"/>
+      </g>
+
+      <!-- バッグアイコン -->
+      <g transform="translate(280, 150)" opacity="0.4">
+        <path d="M-15,0 L-15,20 L15,20 L15,0" fill="none" stroke="#8b7355" stroke-width="2"/>
+        <path d="M-8,0 Q-8,-10 0,-10 Q8,-10 8,0" fill="none" stroke="#8b7355" stroke-width="2"/>
+      </g>
+
+      <text x="200" y="250" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c4f5d">高価買取</text>
+    </symbol>
+  </defs>
+</svg>

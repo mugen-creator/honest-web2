@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合同会社Honest｜誠実と透明性を紡ぐ</title>
+    <meta name="description" content="合同会社Honestは、日本の伝統的な商道徳と革新的なビジネスソリューションを融合し、誠実さと透明性を基盤としたサービスを提供します。">
+    <meta name="keywords" content="合同会社Honest,営業サポート,アライアンス事業,買取事業,東京都新宿区,日本的経営">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="合同会社Honest｜誠実と透明性を紡ぐ">
+    <meta property="og:description" content="日本の伝統的な商道徳と革新的なビジネスソリューションを融合。営業サポート、アライアンス事業、買取事業を展開。">
+    <meta property="og:url" content="https://k-honest.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="合同会社Honest">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://k-honest.com/Honestロゴ%20(2).png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="合同会社Honest｜誠実と透明性を紡ぐ">
+    <meta name="twitter:description" content="日本の伝統的な商道徳と革新的なビジネスソリューションを融合。営業サポート、アライアンス事業、買取事業を展開。">
+    <meta name="twitter:image" content="https://k-honest.com/Honestロゴ%20(2).png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Zen+Old+Mincho:wght@400;700;900&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* 日本の伝統色 */
+            --sumi: #1c1c1c;           /* 墨色 */
+            --hai: #7d7d7d;            /* 灰色 */
+            --shiro: #fffffb;          /* 白色 */
+            --kinari: #f8f4e6;         /* 生成り色 */
+            --mizuiro: #b4d4da;        /* 水色 */
+            --asagi: #72b4c4;          /* 浅葱色 */
+            --ai: #4a7c85;             /* 藍色 */
+            --kon: #223a70;            /* 紺色 */
+            --sango: #f0a68c;          /* 珊瑚色 */
+            --usu-mizuiro: #e6f2f5;    /* 薄水色 */
+
+            /* フォント */
+            --font-serif: 'Zen Old Mincho', 'Noto Serif JP', serif;
+            --font-sans: 'Noto Sans JP', sans-serif;
+            --font-elegant: 'Klee One', cursive;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--sumi);
+            background: var(--shiro);
+            overflow-x: hidden;
+            line-height: 1.6;
+            cursor: none;
+        }
+
+        /* カスタムカーソル */
+        .custom-cursor {
+            width: 12px;
+            height: 12px;
+            border: 2px solid var(--asagi);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.05s ease, background 0.05s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor-follower {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--asagi);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.15s ease;
+            transform: translate(-50%, -50%);
+            opacity: 0.5;
+        }
+
+        a:hover ~ .custom-cursor,
+        button:hover ~ .custom-cursor {
+            transform: translate(-50%, -50%) scale(1.5);
+            background: var(--asagi);
+        }
+
+        /* ローディング画面 - 和風 */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--kinari) 0%, var(--shiro) 100%);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader-logo {
+            margin-bottom: 1rem;
+            animation: logoFloat 2s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-10px) scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        .loader-text {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            color: var(--ai);
+            letter-spacing: 0.3em;
+            margin-top: 1rem;
+            animation: textPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes textPulse {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .loader-bar {
+            width: 200px;
+            height: 2px;
+            background: rgba(111, 187, 211, 0.2);
+            border-radius: 2px;
+            margin-top: 1.5rem;
+            overflow: hidden;
+        }
+
+        .loader-bar-inner {
+            width: 100%;
+            height: 100%;
+            background: var(--asagi);
+            transform: translateX(-100%);
+            animation: loadingBar 2s ease-in-out infinite;
+        }
+
+        @keyframes loadingBar {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(200%);
+            }
+        }
+
+        /* ヘッダー - ミニマル和風 */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 251, 0);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 251, 0.95);
+            box-shadow: 0 1px 0 rgba(28, 28, 28, 0.1);
+        }
+
+        .navbar {
+            padding: 1.5rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.7;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            color: var(--sumi);
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--asagi);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--asagi);
+        }
+
+        /* ヒーローセクション - 動画背景 */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        /* 動画背景 */
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* 動画の上に薄いオーバーレイ */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%);
+            z-index: 1;
+        }
+
+        /* メインコンテンツ */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        .hero-inner {
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-elegant);
+            font-size: 1.1rem;
+            color: var(--shiro);
+            letter-spacing: 0.3em;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            text-shadow:
+                2px 2px 4px rgba(0, 0, 0, 0.8),
+                -1px -1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.2;
+            color: var(--shiro);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+            text-shadow:
+                3px 3px 6px rgba(0, 0, 0, 0.9),
+                -2px -2px 4px rgba(0, 0, 0, 0.7),
+                0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-title .accent {
+            color: var(--mizuiro);
+            text-shadow:
+                3px 3px 6px rgba(0, 0, 0, 0.9),
+                -2px -2px 4px rgba(0, 0, 0, 0.7),
+                0 0 30px rgba(114, 180, 196, 0.6);
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: var(--shiro);
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.7s forwards;
+            text-shadow:
+                2px 2px 4px rgba(0, 0, 0, 0.8),
+                -1px -1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-primary {
+            background: var(--asagi);
+            color: var(--shiro);
+            border: 2px solid var(--shiro);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-primary:hover {
+            background: var(--ai);
+            border-color: var(--shiro);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-outline {
+            background: var(--shiro);
+            backdrop-filter: blur(5px);
+            color: var(--asagi);
+            border: 2px solid var(--shiro);
+            font-weight: 700;
+        }
+
+        .btn-outline:hover {
+            background: var(--asagi);
+            color: var(--shiro);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 縦書き装飾テキスト */
+        .vertical-text {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            writing-mode: vertical-rl;
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            color: var(--hai);
+            letter-spacing: 0.5em;
+            opacity: 0.5;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* About Section - 間（ま）を活かしたデザイン */
+        .about-section {
+            padding: 8rem 0;
+            background: var(--shiro);
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title-ja {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--sumi);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title-en {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            color: var(--hai);
+            text-transform: uppercase;
+        }
+
+        /* 伝統的な装飾線 - 削除（英語と重なるため） */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            aspect-ratio: 4/5;
+            background: url('japanese-hero-bg.svg') center/cover,
+                        linear-gradient(135deg, var(--usu-mizuiro), var(--kinari));
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .about-image-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2372b4c4' stroke-width='0.5' opacity='0.5'%3E%3Ccircle cx='30' cy='0' r='30'/%3E%3Ccircle cx='0' cy='30' r='30'/%3E%3Ccircle cx='60' cy='30' r='30'/%3E%3Ccircle cx='30' cy='60' r='30'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+
+        .about-image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--ai);
+            opacity: 0.8;
+            writing-mode: vertical-rl;
+        }
+
+        .about-content h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--sumi);
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .about-content .lead {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: var(--hai);
+            margin-bottom: 2rem;
+        }
+
+        .about-features {
+            margin-top: 3rem;
+            width: 100%;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem 2rem;
+            background: var(--kinari);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            width: 100%;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .about-feature:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .about-feature:nth-child(1) { animation-delay: 0.1s; }
+        .about-feature:nth-child(2) { animation-delay: 0.2s; }
+        .about-feature:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--asagi);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--shiro);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+
+        .feature-text h4 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: var(--sumi);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text p {
+            color: var(--hai);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Services Section - カード和風 */
+        .services-section {
+            padding: 8rem 0;
+            background: linear-gradient(180deg, var(--kinari) 0%, var(--shiro) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-section .section-container {
+            max-width: 2000px;
+        }
+
+        /* 背景の和柄 */
+        .services-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='52' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%234a7c85' stroke-width='0.3' fill='none'%3E%3Cpath d='M30,0 L15,26 L0,0 M30,0 L45,26 L60,0 M15,26 L30,52 L45,26 M0,52 L15,26 L30,52 M30,52 L45,26 L60,52'/%3E%3Cpath d='M0,0 L15,26 M60,0 L45,26 M15,26 L0,52 M45,26 L60,52'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+            max-width: 2000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-card {
+            background: var(--shiro);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 2px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .service-card-header {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--mizuiro), var(--asagi));
+        }
+
+        .service-card-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+        }
+
+        .service-card-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .service-card-icon svg {
+            fill: var(--shiro);
+            opacity: 0.9;
+        }
+
+        .service-card-body {
+            padding: 3rem;
+        }
+
+        .service-card-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--sumi);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-card-description {
+            color: var(--hai);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card-link {
+            color: var(--asagi);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .service-card-link:hover {
+            gap: 1rem;
+        }
+
+        /* Philosophy Section - 禅スタイル */
+        .philosophy-section {
+            padding: 8rem 0;
+            background: var(--sumi);
+            color: var(--shiro);
+            position: relative;
+        }
+
+        .philosophy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .philosophy-quote {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .philosophy-quote::before,
+        .philosophy-quote::after {
+            content: '"';
+            position: absolute;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+
+        .philosophy-quote::before {
+            top: -20px;
+            left: -50px;
+        }
+
+        .philosophy-quote::after {
+            bottom: -40px;
+            right: -50px;
+            transform: rotate(180deg);
+        }
+
+        .philosophy-author {
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            opacity: 0.7;
+        }
+
+        .philosophy-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+
+        .value-item {
+            text-align: center;
+        }
+
+        .value-kanji {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--mizuiro);
+        }
+
+        .value-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-description {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.8;
+        }
+
+        /* Contact CTA - ミニマル */
+        .contact-cta {
+            padding: 8rem 0;
+            background: linear-gradient(180deg, var(--shiro) 0%, var(--kinari) 100%);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--sumi);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            color: var(--hai);
+            line-height: 2;
+            margin-bottom: 3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer - 和モダン */
+        .footer {
+            background: var(--sumi);
+            color: var(--shiro);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-section h4 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background: var(--asagi);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: var(--shiro);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* ハンバーガーメニュー */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--sumi);
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Mobile line breaks - hidden by default on desktop */
+        br.mobile-break {
+            display: none;
+        }
+
+        /* レスポンシブ */
+        /* Large screens */
+        @media (min-width: 1920px) {
+            .nav-container,
+            .section-container,
+            .footer-content {
+                padding: 0 6rem;
+            }
+
+            .hero-content {
+                padding: 0 8rem;
+            }
+
+            .services-grid {
+                gap: 4rem;
+            }
+
+            .about-grid {
+                gap: 8rem;
+            }
+        }
+
+        /* ホバーエフェクト */
+        .about-feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08) !important;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                cursor: auto;
+            }
+
+            .custom-cursor,
+            .cursor-follower {
+                display: none;
+            }
+
+            /* スマホ表示では改行タグを無効化 */
+            br {
+                display: none;
+            }
+
+            /* Show mobile breaks on mobile */
+            br.mobile-break {
+                display: inline;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--shiro);
+                width: 100%;
+                padding: 2rem 0;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                padding: 1rem 2rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hero-inner {
+                max-width: 100%;
+                text-align: center;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-subtitle {
+                font-size: 0.85rem;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                padding: 0.9rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title-ja {
+                font-size: 1.8rem;
+            }
+
+            .section-title-en {
+                font-size: 0.85rem;
+            }
+
+            .about-intro h3 {
+                font-size: 1.4rem !important;
+            }
+
+            .about-intro p {
+                font-size: 0.95rem !important;
+            }
+
+            .vertical-text {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-features-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+
+            .about-feature-card h4 {
+                font-size: 1.2rem !important;
+            }
+
+            .about-feature-card p {
+                font-size: 0.9rem !important;
+            }
+
+            .service-card-title {
+                font-size: 1.2rem !important;
+            }
+
+            .service-card-description {
+                font-size: 0.9rem !important;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .philosophy-quote {
+                font-size: 1.6rem;
+            }
+
+            .value-kanji {
+                font-size: 2.8rem !important;
+            }
+
+            .value-title {
+                font-size: 1rem !important;
+            }
+
+            .value-description {
+                font-size: 0.8rem !important;
+            }
+
+            .philosophy-values {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-description {
+                font-size: 0.95rem !important;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-section h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 0.9rem;
+            }
+
+            .section-title-ja {
+                font-size: 1.5rem;
+            }
+
+            .about-intro h3 {
+                font-size: 1.2rem !important;
+            }
+
+            .about-intro p {
+                font-size: 0.9rem !important;
+            }
+
+            .philosophy-quote {
+                font-size: 1.3rem;
+            }
+
+            .cta-title {
+                font-size: 1.5rem;
+            }
+
+            .cta-description {
+                font-size: 0.9rem !important;
+            }
+        }
+
+        /* アニメーションクラス */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <!-- カスタムカーソル -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- ローディング画面 -->
+    <div id="loading" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="Honestロゴ (2).png" alt="Honest" style="height: 100px; width: auto; display: block;">
+            </div>
+            <div class="loader-text">誠実と透明性を紡ぐ</div>
+            <div class="loader-bar">
+                <div class="loader-bar-inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <img src="Honestロゴ (2).png" alt="Honest" style="height: 50px; width: auto;">
+                    </a>
+                </div>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">ホーム</a></li>
+                    <li><a href="about.html" class="nav-link">会社概要</a></li>
+                    <li><a href="services.html" class="nav-link">事業内容</a></li>
+                    <li><a href="message.html" class="nav-link">代表挨拶</a></li>
+                    <li><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+                </ul>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <!-- 動画背景 -->
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="211641_small.mp4" type="video/mp4">
+        </video>
+
+        <!-- 動画の上にオーバーレイ -->
+        <div class="hero-overlay"></div>
+
+        <!-- メインコンテンツ -->
+        <div class="hero-content">
+            <div class="hero-inner">
+                <p class="hero-subtitle">
+                    <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.3s forwards; opacity: 0;">感</span>
+                    <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.4s forwards; opacity: 0;">謝</span>
+                    <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.5s forwards; opacity: 0;">と</span>
+                    <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.6s forwards; opacity: 0;">誠</span>
+                    <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.7s forwards; opacity: 0;">実</span>
+                </p>
+                <h1 class="hero-title">
+                    伝統の心を、<br>
+                    <span class="accent">革新の力へ</span>
+                </h1>
+                <p class="hero-description">
+                    日本の商道徳である「誠実」と「信頼」を基盤に、<br>
+                    お客様と共に新しい価値を創造します
+                </p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-primary">私たちについて</a>
+                    <a href="contact.html" class="btn btn-outline">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 縦書き装飾 -->
+        <div class="vertical-text">誠実｜透明｜革新</div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title-ja">私たちについて</h2>
+                <p class="section-title-en">About Us</p>
+                <div class="about-intro" style="max-width: 900px; margin: 3rem auto 0; text-align: center;">
+                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--sumi); margin-bottom: 1.5rem; font-weight: 700; line-height: 1.4;">
+                        日本の商道徳を、ビジネスの強さに
+                    </h3>
+                    <p style="font-size: 1.1rem; line-height: 2; color: var(--hai); margin-bottom: 2rem;">
+                        合同会社Honestは、日本古来の商道徳である「三方良し」の精神を受け継ぎ、<br>
+                        売り手良し、買い手良し、世間良しの理念のもと、<br>
+                        すべてのステークホルダーに価値を提供します。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 中央にビジュアル -->
+            <div class="about-visual fade-in" style="max-width: 600px; margin: 4rem auto 5rem;">
+                <div class="about-image-container">
+                    <div class="about-image-pattern"></div>
+                    <div class="about-image-text">誠実</div>
+                </div>
+            </div>
+
+            <!-- 3つの特徴を横並びで -->
+            <div class="about-features-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <div class="about-feature-card fade-in" style="background: var(--shiro); padding: 3rem 2rem; border-radius: 2px; text-align: center; border: 1px solid rgba(0,0,0,0.05); transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                    <div class="feature-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--asagi), var(--ai)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--shiro); font-size: 2rem; margin: 0 auto 1.5rem; font-family: var(--font-serif); font-weight: 700;">誠</div>
+                    <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--sumi); margin-bottom: 1rem; font-weight: 700;">誠実な関係構築</h4>
+                    <p style="color: var(--hai); line-height: 1.8; font-size: 0.95rem;">信頼を最も大切な資産と考え、すべての取引において誠実さを貫きます</p>
+                </div>
+
+                <div class="about-feature-card fade-in" style="background: var(--shiro); padding: 3rem 2rem; border-radius: 2px; text-align: center; border: 1px solid rgba(0,0,0,0.05); transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                    <div class="feature-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--asagi), var(--ai)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--shiro); font-size: 2rem; margin: 0 auto 1.5rem; font-family: var(--font-serif); font-weight: 700;">透</div>
+                    <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--sumi); margin-bottom: 1rem; font-weight: 700;">透明性の追求</h4>
+                    <p style="color: var(--hai); line-height: 1.8; font-size: 0.95rem;">プロセスと結果の両方において、常に透明性を保ち、安心を提供します</p>
+                </div>
+
+                <div class="about-feature-card fade-in" style="background: var(--shiro); padding: 3rem 2rem; border-radius: 2px; text-align: center; border: 1px solid rgba(0,0,0,0.05); transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                    <div class="feature-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--asagi), var(--ai)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--shiro); font-size: 2rem; margin: 0 auto 1.5rem; font-family: var(--font-serif); font-weight: 700;">革</div>
+                    <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--sumi); margin-bottom: 1rem; font-weight: 700;">革新への挑戦</h4>
+                    <p style="color: var(--hai); line-height: 1.8; font-size: 0.95rem;">伝統を守りながら、最新のテクノロジーとアイデアで新しい価値を創造します</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-pattern"></div>
+
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title-ja">事業内容</h2>
+                <p class="section-title-en">Our Services</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-card-header" style="padding: 0; height: 200px; overflow: hidden; position: relative;">
+                        <img src="https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="営業サポート事業" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="service-card-body">
+                        <h3 class="service-card-title">営業サポート事業</h3>
+                        <p class="service-card-description">
+                            お客様の営業力を最大化する戦略的パートナーとして、
+                            営業プロセスの改善から人材育成まで包括的に支援します。
+                        </p>
+                        <a href="services.html#sales" class="service-card-link">
+                            詳しく見る →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-card-header" style="padding: 0; height: 200px; overflow: hidden; position: relative;">
+                        <img src="https://images.pexels.com/photos/8111873/pexels-photo-8111873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="アライアンス事業" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="service-card-body">
+                        <h3 class="service-card-title">アライアンス事業</h3>
+                        <p class="service-card-description">
+                            企業と企業を結び、相互の強みを活かした戦略的提携を実現。
+                            新たなビジネスチャンスの創出をサポートします。
+                        </p>
+                        <a href="services.html#alliance" class="service-card-link">
+                            詳しく見る →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-card-header" style="padding: 0; height: 200px; overflow: hidden; position: relative;">
+                        <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="買取事業" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="service-card-body">
+                        <h3 class="service-card-title">買取事業</h3>
+                        <p class="service-card-description">
+                            ブランド品、時計、ジュエリーなどの高価買取。
+                            確かな鑑定力と適正価格で、お客様の大切な品を評価します。
+                        </p>
+                        <a href="services.html#purchase" class="service-card-link">
+                            詳しく見る →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="section-container">
+            <div class="philosophy-content fade-in">
+                <blockquote class="philosophy-quote">
+                    信なくば立たず
+                </blockquote>
+                <p class="philosophy-author">― 論語より ―</p>
+
+                <div class="philosophy-values">
+                    <div class="value-item fade-in">
+                        <div class="value-kanji">誠</div>
+                        <h4 class="value-title">誠実</h4>
+                        <p class="value-description">
+                            すべての行動の基盤となる<br>
+                            揺るぎない誠実さ
+                        </p>
+                    </div>
+
+                    <div class="value-item fade-in">
+                        <div class="value-kanji">信</div>
+                        <h4 class="value-title">信頼</h4>
+                        <p class="value-description">
+                            長期的な関係を築く<br>
+                            深い信頼の構築
+                        </p>
+                    </div>
+
+                    <div class="value-item fade-in">
+                        <div class="value-kanji">和</div>
+                        <h4 class="value-title">調和</h4>
+                        <p class="value-description">
+                            すべてのステークホルダーと<br>
+                            調和のとれた成長
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="cta-content fade-in">
+            <h2 class="cta-title">共に、未来を創る</h2>
+            <p class="cta-description">
+                お客様のビジネスの成長と成功を、<br>
+                私たちの喜びとして、全力でサポートいたします
+            </p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">お問い合わせはこちら</a>
+                <a href="tel:03-4500-3763" class="btn btn-outline">03-4500-3763</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="Honestロゴ (2).png" alt="Honest" style="height: 60px; margin-bottom: 1rem; filter: brightness(0) invert(1); opacity: 0.9;">
+                <p style="margin-top: 1rem; opacity: 0.8; line-height: 1.8;">
+                    誠実さと透明性を基盤に、<br>
+                    日本の伝統的な商道徳を大切にしながら、<br>
+                    革新的なビジネスソリューションを提供します。
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>サービス</h4>
+                <ul>
+                    <li><a href="services.html#sales">営業サポート事業</a></li>
+                    <li><a href="services.html#alliance">アライアンス事業</a></li>
+                    <li><a href="services.html#purchase">買取事業</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>企業情報</h4>
+                <ul>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="message.html">代表挨拶</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>お問い合わせ</h4>
+                <p style="opacity: 0.8; line-height: 1.8;">
+                    〒169-0072<br>
+                    東京都新宿区大久保2-19-15<br>
+                    TEL: 03-4500-3763<br>
+                    Email: info@k-honest.com
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 合同会社Honest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="japanese-animations.js"></script>
+    <script>
+        // カスタムカーソル
+        const cursor = document.querySelector('.custom-cursor');
+        const follower = document.querySelector('.cursor-follower');
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let followerX = 0;
+        let followerY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        function animateFollower() {
+            const distX = mouseX - followerX;
+            const distY = mouseY - followerY;
+
+            followerX += distX / 10;
+            followerY += distY / 10;
+
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+
+        // リンクやボタンにホバーした時のエフェクト
+        const hoverTargets = document.querySelectorAll('a, button, .service-card');
+        hoverTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursor.style.background = 'var(--asagi)';
+                follower.style.transform = 'translate(-50%, -50%) scale(1.3)';
+            });
+            target.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.background = 'transparent';
+                follower.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+        });
+
+        // ローディング画面 - 動画の読み込みを待つ
+        const video = document.querySelector('.hero-video');
+        const loading = document.getElementById('loading');
+        let hideLoading = false;
+
+        // 動画が読み込まれたらローディングを消す
+        video.addEventListener('loadeddata', () => {
+            if (!hideLoading) {
+                hideLoading = true;
+                setTimeout(() => {
+                    loading.classList.add('hidden');
+                }, 500);
+            }
+        });
+
+        // 最大5秒でタイムアウト（動画が読み込めなくてもページを表示）
+        setTimeout(() => {
+            if (!hideLoading) {
+                hideLoading = true;
+                loading.classList.add('hidden');
+            }
+        }, 5000);
+
+        // ヘッダースクロール
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // モバイルメニュー
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // スクロールアニメーション
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // アニメーション要素を監視
+        document.querySelectorAll('.fade-in, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- 和紙テクスチャ効果 -->
+    <filter id="paperTexture">
+      <feTurbulence baseFrequency="0.04" numOctaves="5" result="turbulence" seed="1"/>
+      <feColorMatrix in="turbulence" mode="saturate" values="0"/>
+    </filter>
+
+    <!-- 墨絵風グラデーション -->
+    <radialGradient id="inkWash" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#f8f4e6;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#e8f4f8;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#d4e8ee;stop-opacity:0.6"/>
+    </radialGradient>
+
+    <!-- 富士山シルエット -->
+    <linearGradient id="mtFujiGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6fbbd3;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#4a7c85;stop-opacity:0.3"/>
+    </linearGradient>
+
+    <!-- 桜の花びらグラデーション -->
+    <radialGradient id="sakuraGradient">
+      <stop offset="0%" style="stop-color:#ffb3ba;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#ff6b7a;stop-opacity:0.1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="url(#inkWash)"/>
+
+  <!-- 和紙テクスチャレイヤー -->
+  <rect width="1920" height="1080" fill="#f8f4e6" opacity="0.5" filter="url(#paperTexture)"/>
+
+  <!-- 遠景の山々（墨絵風） -->
+  <g opacity="0.2">
+    <path d="M0,700 Q200,500 400,600 T800,550 T1200,600 T1600,500 T1920,650 L1920,1080 L0,1080 Z"
+          fill="url(#mtFujiGradient)"/>
+  </g>
+
+  <!-- 中景の山 -->
+  <g opacity="0.25">
+    <path d="M0,750 Q300,600 500,700 T900,650 T1300,700 T1700,600 T1920,750 L1920,1080 L0,1080 Z"
+          fill="#72b4c4" opacity="0.4"/>
+  </g>
+
+  <!-- 近景の山 -->
+  <g opacity="0.3">
+    <path d="M0,800 Q250,700 450,780 T850,750 T1250,800 T1650,720 T1920,820 L1920,1080 L0,1080 Z"
+          fill="#4a9fb5" opacity="0.5"/>
+  </g>
+
+  <!-- 松の木シルエット -->
+  <g transform="translate(150, 600)" opacity="0.3">
+    <path d="M0,0 L-30,40 L-20,40 L-40,70 L-25,70 L-45,100 L-15,100 L-15,150 L15,150 L15,100 L45,100 L25,70 L40,70 L20,40 L30,40 Z"
+          fill="#4a7c85"/>
+  </g>
+
+  <g transform="translate(1700, 650)" opacity="0.25">
+    <path d="M0,0 L-25,35 L-18,35 L-35,60 L-22,60 L-40,85 L-13,85 L-13,120 L13,120 L13,85 L40,85 L22,60 L35,60 L18,35 L25,35 Z"
+          fill="#4a7c85"/>
+  </g>
+
+  <!-- 雲（伝統的な和風の雲） -->
+  <g opacity="0.4">
+    <path d="M200,200 Q220,180 250,190 T300,185 T350,195 T400,180 Q420,170 430,185 Q425,200 400,205 T350,208 T300,210 T250,205 T200,200"
+          fill="white" opacity="0.6"/>
+    <path d="M500,250 Q520,230 550,240 T600,235 T650,245 T700,230 Q720,220 730,235 Q725,250 700,255 T650,258 T600,260 T550,255 T500,250"
+          fill="white" opacity="0.5"/>
+  </g>
+
+  <!-- 流れる霞 -->
+  <g opacity="0.2">
+    <rect x="0" y="400" width="1920" height="2" fill="white" opacity="0.3"/>
+    <rect x="0" y="450" width="1600" height="1" fill="white" opacity="0.2"/>
+    <rect x="0" y="500" width="1400" height="1" fill="white" opacity="0.15"/>
+  </g>
+
+  <!-- 桜の花びら（装飾） -->
+  <g opacity="0.3">
+    <circle cx="300" cy="300" r="8" fill="url(#sakuraGradient)" transform="rotate(45 300 300)">
+      <animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="400" r="6" fill="url(#sakuraGradient)" transform="rotate(-30 600 400)">
+      <animateTransform attributeName="transform" type="rotate" from="0 600 400" to="-360 600 400" dur="25s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1400" cy="350" r="7" fill="url(#sakuraGradient)" transform="rotate(60 1400 350)">
+      <animateTransform attributeName="transform" type="rotate" from="0 1400 350" to="360 1400 350" dur="30s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 鳥のシルエット -->
+  <g opacity="0.2">
+    <path d="M800,300 Q810,295 820,300" stroke="#4a7c85" stroke-width="2" fill="none"/>
+    <path d="M830,310 Q840,305 850,310" stroke="#4a7c85" stroke-width="2" fill="none"/>
+    <path d="M1200,280 Q1210,275 1220,280" stroke="#4a7c85" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- 日の出/夕日効果 -->
+  <circle cx="1500" cy="400" r="150" fill="#ffb366" opacity="0.1"/>
+  <circle cx="1500" cy="400" r="100" fill="#ffa366" opacity="0.1"/>
+  <circle cx="1500" cy="400" r="50" fill="#ff9366" opacity="0.15"/>
+</svg>
