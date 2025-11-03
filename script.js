@@ -136,25 +136,11 @@ const navHighlighter = () => {
 
 window.addEventListener('scroll', navHighlighter);
 
-// Form Handling - 和風メッセージ
+// Form Handling - Netlify Formsに対応
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(this);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
-
-        // Show success message
-        showNotification('お問い合わせありがとうございます。内容を確認の上、ご返信させていただきます。', 'success');
-
-        // Reset form
-        this.reset();
-    });
+    // Netlify Formsが処理するため、JavaScriptでの送信処理は削除
+    // フォームは通常通りPOSTされ、Netlifyが処理します
 }
 
 // Notification System - 和風スタイル
