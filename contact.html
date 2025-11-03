@@ -21,6 +21,10 @@
     <meta name="twitter:title" content="お問い合わせ | 合同会社Honest">
     <meta name="twitter:description" content="お問い合わせはこちら。ビジネス相談、買取査定を承ります。">
     <meta name="twitter:image" content="https://k-honest.com/Honestロゴ%20(2).png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://k-honest.com/contact.html">
+
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -559,6 +563,35 @@
             }
         }
     </style>
+
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "合同会社Honest",
+        "url": "https://k-honest.com/",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+81-3-5937-1337",
+          "email": "info@k-honest.com",
+          "contactType": "Customer Service",
+          "availableLanguage": ["Japanese"],
+          "areaServed": "JP"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "大久保2丁目19-15 サンフォレスト405号室",
+          "addressLocality": "新宿区",
+          "addressRegion": "東京都",
+          "postalCode": "169-0072",
+          "addressCountry": "JP"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- カスタムカーソル -->
