@@ -155,6 +155,176 @@
             justify-content: center;
             font-size: 36px;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icon-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .icon-text {
+            position: relative;
+            z-index: 2;
+            font-family: var(--font-serif);
+            font-weight: 700;
+        }
+
+        /* 大地のアニメーション */
+        .earth-layer-1 {
+            animation: earthWave1 4s ease-in-out infinite;
+        }
+
+        .earth-layer-2 {
+            animation: earthWave2 5s ease-in-out infinite;
+        }
+
+        .earth-layer-3 {
+            animation: earthWave1 6s ease-in-out infinite reverse;
+        }
+
+        @keyframes earthWave1 {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        @keyframes earthWave2 {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(3px);
+            }
+        }
+
+        /* 滝のアニメーション */
+        .water-stream-1 {
+            animation: waterFlow 2s linear infinite;
+        }
+
+        .water-stream-2 {
+            animation: waterFlow 2.5s linear infinite 0.2s;
+        }
+
+        .water-stream-3 {
+            animation: waterFlow 3s linear infinite 0.4s;
+        }
+
+        .water-stream-4 {
+            animation: waterFlow 2.8s linear infinite 0.6s;
+        }
+
+        .water-drop-1 {
+            animation: waterDrop 3s ease-in infinite;
+        }
+
+        .water-drop-2 {
+            animation: waterDrop 3.5s ease-in infinite 0.5s;
+        }
+
+        .water-drop-3 {
+            animation: waterDrop 4s ease-in infinite 1s;
+        }
+
+        @keyframes waterFlow {
+            0% {
+                opacity: 0.8;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 0.2;
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes waterDrop {
+            0% {
+                transform: translateY(-20px) scale(0);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.7;
+                transform: translateY(0) scale(1);
+            }
+            80% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(80px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* 稲妻のアニメーション */
+        .lightning-bolt {
+            animation: lightningFlash 3s ease-in-out infinite;
+        }
+
+        .energy-pulse-1 {
+            animation: energyPulse 2s ease-out infinite;
+            transform-origin: center;
+        }
+
+        .energy-pulse-2 {
+            animation: energyPulse 2s ease-out infinite 0.5s;
+            transform-origin: center;
+        }
+
+        @keyframes lightningFlash {
+            0%, 45%, 55%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.9;
+                filter: brightness(1.5) url(#glow);
+            }
+        }
+
+        @keyframes energyPulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        /* ホバーエフェクト強化 */
+        .philosophy-card:hover .earth-layer-1,
+        .philosophy-card:hover .earth-layer-2,
+        .philosophy-card:hover .earth-layer-3 {
+            animation-duration: 2s;
+        }
+
+        .philosophy-card:hover .water-stream-1,
+        .philosophy-card:hover .water-stream-2,
+        .philosophy-card:hover .water-stream-3,
+        .philosophy-card:hover .water-stream-4 {
+            animation-duration: 1.5s;
+        }
+
+        .philosophy-card:hover .lightning-bolt {
+            animation-duration: 1.5s;
+        }
+
+        .philosophy-card:hover .icon-text {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
         }
 
         .philosophy-card h3 {
@@ -393,6 +563,20 @@
                 font-size: 28px !important;
             }
 
+            /* モバイルでアニメーション速度を調整 */
+            .earth-layer-1,
+            .earth-layer-2,
+            .earth-layer-3 {
+                animation-duration: 3s !important;
+            }
+
+            .water-stream-1,
+            .water-stream-2,
+            .water-stream-3,
+            .water-stream-4 {
+                animation-duration: 1.8s !important;
+            }
+
             .timeline {
                 padding: 1.5rem 0 !important;
             }
@@ -627,7 +811,25 @@
 
             <div class="philosophy-cards">
                 <div class="philosophy-card animate-on-scroll">
-                    <div class="philosophy-icon">誠</div>
+                    <div class="philosophy-icon earth-icon">
+                        <svg class="icon-background" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="earthGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:rgba(139,69,19,0.3);stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:rgba(160,82,45,0.4);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:rgba(101,67,33,0.3);stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="earthGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:rgba(160,82,45,0.2);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:rgba(139,69,19,0.3);stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path class="earth-layer-1" d="M0,40 Q25,38 50,40 T100,40 L100,60 Q75,58 50,60 T0,60 Z" fill="url(#earthGrad1)" />
+                            <path class="earth-layer-2" d="M0,60 Q25,62 50,60 T100,60 L100,80 Q75,78 50,80 T0,80 Z" fill="url(#earthGrad2)" />
+                            <path class="earth-layer-3" d="M0,30 Q25,32 50,30 T100,30 L100,40 Q75,42 50,40 T0,40 Z" fill="url(#earthGrad1)" opacity="0.5" />
+                        </svg>
+                        <span class="icon-text">誠</span>
+                    </div>
                     <h3>誠実</h3>
                     <p>
                         お客様、パートナー企業、従業員、すべてのステークホルダーに対して、
@@ -636,7 +838,25 @@
                 </div>
 
                 <div class="philosophy-card animate-on-scroll">
-                    <div class="philosophy-icon">透</div>
+                    <div class="philosophy-icon waterfall-icon">
+                        <svg class="icon-background" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="waterfallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:rgba(135,206,235,0.3);stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:rgba(100,149,237,0.4);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:rgba(70,130,180,0.3);stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect class="water-stream-1" x="20" y="0" width="3" height="100" fill="url(#waterfallGrad)" opacity="0.6" />
+                            <rect class="water-stream-2" x="40" y="0" width="3" height="100" fill="url(#waterfallGrad)" opacity="0.7" />
+                            <rect class="water-stream-3" x="60" y="0" width="3" height="100" fill="url(#waterfallGrad)" opacity="0.6" />
+                            <rect class="water-stream-4" x="80" y="0" width="3" height="100" fill="url(#waterfallGrad)" opacity="0.5" />
+                            <circle class="water-drop-1" cx="30" cy="20" r="2" fill="rgba(135,206,235,0.7)" />
+                            <circle class="water-drop-2" cx="50" cy="40" r="2" fill="rgba(135,206,235,0.7)" />
+                            <circle class="water-drop-3" cx="70" cy="60" r="2" fill="rgba(135,206,235,0.7)" />
+                        </svg>
+                        <span class="icon-text">透</span>
+                    </div>
                     <h3>透明性</h3>
                     <p>
                         ビジネスプロセスの透明性を重視し、
@@ -645,7 +865,28 @@
                 </div>
 
                 <div class="philosophy-card animate-on-scroll">
-                    <div class="philosophy-icon">革</div>
+                    <div class="philosophy-icon lightning-icon">
+                        <svg class="icon-background" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="lightningGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:rgba(255,215,0,0.4);stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:rgba(255,255,102,0.5);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:rgba(255,215,0,0.3);stop-opacity:1" />
+                                </linearGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <path class="lightning-bolt" d="M55,10 L40,50 L50,50 L35,90 L65,45 L55,45 Z" fill="url(#lightningGrad)" filter="url(#glow)" />
+                            <circle class="energy-pulse-1" cx="50" cy="50" r="20" fill="none" stroke="rgba(255,215,0,0.3)" stroke-width="1" />
+                            <circle class="energy-pulse-2" cx="50" cy="50" r="30" fill="none" stroke="rgba(255,215,0,0.2)" stroke-width="1" />
+                        </svg>
+                        <span class="icon-text">革</span>
+                    </div>
                     <h3>革新</h3>
                     <p>
                         伝統的な価値観を大切にしながら、
