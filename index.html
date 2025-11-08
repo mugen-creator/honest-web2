@@ -122,6 +122,10 @@
             pointer-events: none;
         }
 
+        body.loading {
+            overflow: hidden;
+        }
+
         .loader-content {
             text-align: center;
             display: flex;
@@ -1235,7 +1239,7 @@
     }
     </script>
 </head>
-<body>
+<body class="loading">
     <!-- カスタムカーソル -->
     <div class="custom-cursor"></div>
     <div class="cursor-follower"></div>
@@ -1585,12 +1589,17 @@
         const loading = document.getElementById('loading');
         let hideLoading = false;
 
+        // ページ読み込み時は必ずトップに
+        window.scrollTo(0, 0);
+
         // 動画が読み込まれたらローディングを消す
         video.addEventListener('loadeddata', () => {
             if (!hideLoading) {
                 hideLoading = true;
                 setTimeout(() => {
                     loading.classList.add('hidden');
+                    document.body.classList.remove('loading');
+                    window.scrollTo(0, 0);
                 }, 200);
             }
         });
@@ -1600,6 +1609,8 @@
             if (!hideLoading) {
                 hideLoading = true;
                 loading.classList.add('hidden');
+                document.body.classList.remove('loading');
+                window.scrollTo(0, 0);
             }
         }, 2000);
 
