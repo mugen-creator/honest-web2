@@ -116,8 +116,8 @@ body::before {
 }
 
 .loader-logo {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     animation: float 3s ease-in-out infinite;
 }
 
