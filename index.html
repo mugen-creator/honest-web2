@@ -109,12 +109,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--kinari) 0%, var(--shiro) 100%);
+            background: var(--shiro);
             z-index: 10000;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.3s ease;
         }
 
         .loading-screen.hidden {
@@ -132,39 +132,19 @@
 
         .loader-logo {
             margin-bottom: 1rem;
-            animation: logoFloat 2s ease-in-out infinite;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        @keyframes logoFloat {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-                opacity: 0.8;
-            }
-            50% {
-                transform: translateY(-10px) scale(1.05);
-                opacity: 1;
-            }
+            opacity: 0.9;
         }
 
         .loader-text {
             font-family: var(--font-serif);
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--ai);
             letter-spacing: 0.3em;
             margin-top: 1rem;
-            animation: textPulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes textPulse {
-            0%, 100% {
-                opacity: 0.5;
-            }
-            50% {
-                opacity: 1;
-            }
+            opacity: 0.7;
         }
 
         .loader-bar {
@@ -181,7 +161,7 @@
             height: 100%;
             background: var(--asagi);
             transform: translateX(-100%);
-            animation: loadingBar 2s ease-in-out infinite;
+            animation: loadingBar 1s ease-in-out infinite;
         }
 
         @keyframes loadingBar {
@@ -1611,17 +1591,17 @@
                 hideLoading = true;
                 setTimeout(() => {
                     loading.classList.add('hidden');
-                }, 500);
+                }, 200);
             }
         });
 
-        // 最大5秒でタイムアウト（動画が読み込めなくてもページを表示）
+        // 最大2秒でタイムアウト（動画が読み込めなくてもページを表示）
         setTimeout(() => {
             if (!hideLoading) {
                 hideLoading = true;
                 loading.classList.add('hidden');
             }
-        }, 5000);
+        }, 2000);
 
         // ヘッダースクロール
         window.addEventListener('scroll', () => {
