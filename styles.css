@@ -291,6 +291,26 @@ body.cursor-hover .cursor-follower {
     color: var(--primary-color);
 }
 
+/* オンラインストアリンク */
+.nav-store {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.nav-store::after {
+    display: none;
+}
+
+.nav-store:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color));
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 /* ハンバーガーメニュー */
 .hamburger {
     display: none;
