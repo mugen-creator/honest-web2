@@ -5,160 +5,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プライバシーポリシー | 合同会社Honest</title>
     <meta name="description" content="合同会社Honestのプライバシーポリシー。個人情報の取り扱いについて説明しています。">
-    <meta name="keywords" content="プライバシーポリシー,個人情報保護,合同会社Honest">
 
     <!-- OGP Tags -->
     <meta property="og:title" content="プライバシーポリシー | 合同会社Honest">
-    <meta property="og:description" content="合同会社Honestのプライバシーポリシー。個人情報の取り扱いについて説明しています。">
+    <meta property="og:description" content="個人情報の取り扱いについて">
     <meta property="og:url" content="https://k-honest.com/privacy-policy.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="合同会社Honest">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="https://k-honest.com/Honestロゴ%20(2).png">
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="プライバシーポリシー | 合同会社Honest">
-    <meta name="twitter:description" content="個人情報の取り扱いについて">
-    <meta name="twitter:image" content="https://k-honest.com/Honestロゴ%20(2).png">
-
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://k-honest.com/privacy-policy.html">
-
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="japanese-page-styles.css">
-    <script src="japanese-animations.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
+        /* ============================================
+           PRIVACY POLICY PAGE - LUXURY MINIMAL
+           ============================================ */
+
+        /* Page Hero */
         .page-hero {
             min-height: 50vh;
-            background: linear-gradient(135deg, #f8fafb 0%, #e8f4f8 100%);
             display: flex;
             align-items: center;
-            justify-content: center;
+            background: #0a0a0a;
             position: relative;
-            padding-top: 100px;
+            padding-top: 120px;
         }
 
-        .privacy-main {
-            padding: 100px 0;
-            background: var(--bg-white);
+        .page-hero-content {
+            padding: 0 8%;
         }
 
-        .privacy-content {
-            max-width: 900px;
-            margin: 0 auto;
+        .page-hero-label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+        }
+
+        .page-hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: white;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        /* Privacy Content */
+        .privacy-section {
+            padding: 120px 0;
             background: white;
-            padding: 4rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
         }
 
-        .privacy-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .privacy-content h4 {
-            font-size: 1.2rem;
-            margin: 2.5rem 0 1rem;
-            font-weight: 700;
-            color: var(--text-dark);
+        .privacy-intro {
+            font-size: 16px;
+            line-height: 2.2;
+            color: #555;
+            margin-bottom: 80px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid #eee;
         }
 
-        .privacy-content p {
-            margin-bottom: 1.5rem;
-            line-height: 1.9;
-            color: var(--text-dark);
+        .privacy-block {
+            margin-bottom: 48px;
         }
 
-        .privacy-content ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
+        .privacy-block h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0a0a0a;
+            margin-bottom: 16px;
+            padding-left: 20px;
+            position: relative;
         }
 
-        .privacy-content li {
-            margin-bottom: 0.5rem;
-            line-height: 1.8;
+        .privacy-block h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background: var(--cyan-600);
         }
 
+        .privacy-block p {
+            font-size: 15px;
+            line-height: 2;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        .privacy-block ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        .privacy-block li {
+            font-size: 14px;
+            line-height: 2;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .privacy-contact {
+            background: #fafafa;
+            padding: 32px;
+            margin-top: 24px;
+        }
+
+        .privacy-contact p {
+            margin-bottom: 4px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .privacy-date {
+            text-align: right;
+            font-size: 13px;
+            color: #888;
+            margin-top: 64px;
+            padding-top: 48px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .privacy-content {
-                padding: 2rem;
+            .page-hero {
+                min-height: 40vh;
             }
 
-            .privacy-content h3 {
-                font-size: 1.3rem;
+            .page-hero-content {
+                padding: 0 24px;
             }
 
-            .privacy-content h4 {
-                font-size: 1.1rem;
+            .privacy-section {
+                padding: 80px 0;
+            }
+
+            .privacy-intro {
+                margin-bottom: 48px;
+                padding-bottom: 32px;
+            }
+
+            .privacy-contact {
+                padding: 24px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" id="header">
+    <header class="header">
+        <div class="header-top">
+            <p>誠実と透明性で、信頼関係を築く</p>
+        </div>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-brand">
                     <a href="index.html" class="logo">
-                        <img src="Honestロゴ (2).png" alt="Honest" style="height: 50px; width: auto;">
+                        <span class="logo-text">Honest</span>
                     </a>
                 </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">ホーム</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link">事業内容</a></li>
-                    <li class="nav-item"><a href="message.html" class="nav-link">代表メッセージ</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">お問い合わせ</a></li>
-                    <li class="nav-item"><a href="https://maison.k-honest.com/" class="nav-link nav-store" target="_blank">オンラインストア</a></li>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="message.html" class="nav-link">MESSAGE</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li class="nav-item"><a href="https://maison.k-honest.com" class="nav-link nav-store" target="_blank">ONLINE STORE</a></li>
                 </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+
+                <button class="hamburger" aria-label="メニューを開く">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Page Hero -->
     <section class="page-hero">
-        <div class="container-japanese">
-            <h1 class="page-title-japanese animate-on-scroll">プライバシーポリシー</h1>
-            <p class="page-subtitle-japanese animate-on-scroll">Privacy Policy</p>
+        <div class="page-hero-content">
+            <p class="page-hero-label reveal">Privacy Policy</p>
+            <h1 class="page-hero-title reveal">プライバシーポリシー</h1>
         </div>
     </section>
 
-    <!-- Privacy Policy Content -->
-    <section class="privacy-main">
-        <div class="container-japanese">
-            <div class="privacy-content animate-on-scroll">
-                <h3>個人情報の取り扱いについて</h3>
+    <!-- Privacy Content -->
+    <section class="privacy-section">
+        <div class="privacy-container">
+            <p class="privacy-intro reveal">
+                合同会社Honest（以下「当社」）は、お客様の個人情報の保護を重要な責務と考え、以下のとおりプライバシーポリシーを定め、個人情報の適切な取り扱いに努めてまいります。
+            </p>
 
-                <p>
-                    合同会社Honest（以下「当社」）は、お客様の個人情報保護の重要性について認識し、個人情報の保護に関する法律（以下「個人情報保護法」）を遵守すると共に、以下のプライバシーポリシー（以下「本ポリシー」）に従い、適切な取扱い及び保護に努めます。
-                </p>
-
-                <h4>1. 個人情報の定義</h4>
+            <div class="privacy-block reveal">
+                <h3>1. 個人情報の定義</h3>
                 <p>
                     個人情報とは、氏名、住所、電話番号、メールアドレスなど、特定の個人を識別することができる情報をいいます。
                 </p>
+            </div>
 
-                <h4>2. 個人情報の取得</h4>
+            <div class="privacy-block reveal">
+                <h3>2. 個人情報の取得</h3>
                 <p>
                     当社は、適法かつ公正な手段によってお客様の個人情報を取得いたします。お問い合わせフォーム等を通じて、お客様ご自身の意思により提供いただいた情報を取得いたします。
                 </p>
+            </div>
 
-                <h4>3. 個人情報の利用目的</h4>
+            <div class="privacy-block reveal">
+                <h3>3. 個人情報の利用目的</h3>
                 <p>当社は、取得した個人情報を以下の目的で利用いたします。</p>
                 <ul>
                     <li>お問い合わせへの回答・対応</li>
@@ -166,82 +247,126 @@
                     <li>各種ご案内の送付</li>
                     <li>その他、上記利用目的に付随する目的</li>
                 </ul>
+            </div>
 
-                <h4>4. 個人情報の第三者提供</h4>
+            <div class="privacy-block reveal">
+                <h3>4. 個人情報の第三者提供</h3>
                 <p>
                     当社は、法令に基づく場合を除き、お客様の事前の同意なく、個人情報を第三者に提供することはございません。
                 </p>
+            </div>
 
-                <h4>5. 個人情報の管理</h4>
+            <div class="privacy-block reveal">
+                <h3>5. 個人情報の管理</h3>
                 <p>
                     当社は、個人情報の正確性を保ち、これを安全に管理いたします。個人情報の漏洩、滅失、毀損等を防止するため、必要かつ適切な安全管理措置を講じます。
                 </p>
+            </div>
 
-                <h4>6. 個人情報の開示・訂正・削除</h4>
+            <div class="privacy-block reveal">
+                <h3>6. 個人情報の開示・訂正・削除</h3>
                 <p>
                     お客様は、当社が保有するご自身の個人情報について、開示、訂正、削除等を求めることができます。ご希望の場合は、下記お問い合わせ先までご連絡ください。
                 </p>
-
-                <h4>7. お問い合わせ先</h4>
-                <p style="margin-bottom: 0.5rem;">合同会社Honest</p>
-                <p style="margin-bottom: 0.5rem;">〒169-0072 東京都新宿区大久保2-19-15</p>
-                <p style="margin-bottom: 0.5rem;">TEL: 03-4500-3763</p>
-                <p style="margin-bottom: 1.5rem;">Email: info@k-honest.com</p>
-
-                <p style="margin-top: 3rem; text-align: right; font-size: 0.95rem; color: var(--text-secondary);">
-                    制定日：2025年1月1日
-                </p>
             </div>
+
+            <div class="privacy-block reveal">
+                <h3>7. お問い合わせ先</h3>
+                <div class="privacy-contact">
+                    <p>合同会社Honest</p>
+                    <p>〒169-0072 東京都新宿区大久保2-19-15</p>
+                    <p>TEL: 03-4500-3763</p>
+                    <p>Email: info@k-honest.com</p>
+                </div>
+            </div>
+
+            <p class="privacy-date reveal">制定日：2025年1月1日</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <img src="Honestロゴ (2).png" alt="Honest" style="height: 60px; margin-bottom: 1rem; filter: brightness(0) invert(1); opacity: 0.9;">
-                <p style="margin-top: 1rem; opacity: 0.8; line-height: 1.8;">
-                    誠実さと透明性を基盤に、<br>
-                    日本の伝統的な商道徳を大切にしながら、<br>
-                    革新的なビジネスソリューションを提供します。
-                </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Honest</span>
+                    <p>誠実と透明性を大切に、<br>お客様との信頼関係を築きます。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="message.html">代表メッセージ</a></li>
+                        <li><a href="services.html">事業内容</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#purchase">買取・販売事業</a></li>
+                        <li><a href="services.html#sales-support">営業サポート</a></li>
+                        <li><a href="services.html#alliance">アライアンス事業</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                        <li><a href="https://maison.k-honest.com" target="_blank">オンラインストア</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-section">
-                <h4>サービス</h4>
-                <ul>
-                    <li><a href="services.html#purchase">買取・販売事業</a></li>
-                    <li><a href="services.html#sales">営業サポート事業</a></li>
-                    <li><a href="services.html#alliance">アライアンス事業</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2024 合同会社Honest. All rights reserved.</p>
+                <p>古物商許可番号: 第304362420799号</p>
             </div>
-
-            <div class="footer-section">
-                <h4>企業情報</h4>
-                <ul>
-                    <li><a href="about.html">会社概要</a></li>
-                    <li><a href="message.html">代表挨拶</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                    <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>お問い合わせ</h4>
-                <p style="opacity: 0.8; line-height: 1.8;">
-                    〒169-0072<br>
-                    東京都新宿区大久保2-19-15<br>
-                    TEL: 03-4500-3763<br>
-                    Email: info@k-honest.com
-                </p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 合同会社Honest. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Reveal Animation
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Header scroll
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

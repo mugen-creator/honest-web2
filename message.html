@@ -5,598 +5,368 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>代表メッセージ | 合同会社Honest</title>
     <meta name="description" content="合同会社Honest代表 町田強平からのメッセージ。誠実さと透明性を大切に、お客様と共に成長する企業を目指します。">
-    <meta name="keywords" content="代表メッセージ,町田強平,合同会社Honest,企業理念,ビジョン">
 
     <!-- OGP Tags -->
     <meta property="og:title" content="代表メッセージ | 合同会社Honest">
-    <meta property="og:description" content="合同会社Honest代表 町田強平からのメッセージ。誠実さと透明性を大切に、お客様と共に成長する企業を目指します。">
+    <meta property="og:description" content="合同会社Honest代表からのメッセージ。誠実さと透明性を大切に。">
     <meta property="og:url" content="https://k-honest.com/message.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="合同会社Honest">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="https://k-honest.com/Honestロゴ%20(2).png">
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="代表メッセージ | 合同会社Honest">
-    <meta name="twitter:description" content="代表 町田強平からのメッセージ。誠実さと透明性を大切に。">
-    <meta name="twitter:image" content="https://k-honest.com/Honestロゴ%20(2).png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="japanese-page-styles.css">
-    <script src="japanese-animations.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
+        /* ============================================
+           MESSAGE PAGE - LUXURY MINIMAL
+           ============================================ */
+
+        /* Page Hero */
         .page-hero {
-            min-height: 50vh;
-            background: linear-gradient(135deg, #f8fafb 0%, #e8f4f8 100%);
+            min-height: 70vh;
             display: flex;
             align-items: center;
-            justify-content: center;
+            background: #0a0a0a;
             position: relative;
-            padding-top: 100px;
+            padding-top: 120px;
         }
 
-        .message-main {
-            padding: 100px 0;
-            background: var(--bg-white);
+        .page-hero-content {
+            padding: 0 8%;
+        }
+
+        .page-hero-label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+        }
+
+        .page-hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: white;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 32px;
+        }
+
+        .page-hero-text {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            line-height: 2;
+            max-width: 500px;
+        }
+
+        /* Message Section */
+        .message-section {
+            padding: 160px 0;
+            background: white;
         }
 
         .message-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-
-        .message-content {
-            background: white;
-            padding: 4rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-md);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .message-content::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            font-size: 150px;
-            color: var(--primary-light);
-            opacity: 0.3;
-            font-family: var(--font-heading);
-        }
-
-        .message-title {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            color: var(--text-dark);
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .message-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
-        }
-
-        .message-text {
-            font-size: 1.1rem;
-            line-height: 2;
-            color: var(--text-medium);
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .message-text p {
-            margin-bottom: 1.5rem;
-            text-indent: 1em;
-        }
-
-        .message-highlight {
-            background: linear-gradient(transparent 60%, rgba(111, 187, 211, 0.2) 60%);
-            padding: 0 2px;
-            font-weight: 500;
-        }
-
-        .vision-section {
-            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
-            padding: 100px 0;
-        }
-
-        .vision-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .vision-card {
-            background: white;
-            padding: 3rem 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow-md);
-            text-align: center;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .vision-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
-        }
-
-        .vision-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .vision-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: white;
-        }
-
-        .vision-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .commitment-section {
-            padding: 100px 0;
-            background: var(--bg-white);
-        }
-
-        .commitment-list {
-            display: grid;
-            gap: 2rem;
             max-width: 800px;
             margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .commitment-item {
-            display: grid;
-            grid-template-columns: 60px 1fr;
-            gap: 2rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .commitment-item:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateX(5px);
-        }
-
-        .commitment-number {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-english);
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        .commitment-content h3 {
-            font-size: 1.3rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .commitment-content p {
-            color: var(--text-medium);
-            line-height: 1.7;
-        }
-
-        .signature-section {
+        .message-quote {
+            font-family: var(--font-serif);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            line-height: 1.8;
+            color: #0a0a0a;
             text-align: center;
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 1px solid var(--border-light);
+            margin-bottom: 80px;
+            position: relative;
         }
 
-        .signature-name {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
+        .message-quote::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 8rem;
+            color: rgba(0,0,0,0.05);
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .message-body {
+            font-size: 16px;
+            line-height: 2.4;
+            color: #444;
+        }
+
+        .message-body p {
+            margin-bottom: 32px;
+        }
+
+        .message-signature {
+            margin-top: 80px;
+            padding-top: 48px;
+            border-top: 1px solid #eee;
+            text-align: right;
         }
 
         .signature-title {
-            color: var(--text-medium);
-            font-size: 1.1rem;
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 8px;
         }
 
-        /* ハンバーガーメニュー - indexと同じコード */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 5px;
+        .signature-name {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: #0a0a0a;
         }
 
-        .hamburger span {
-            width: 25px;
-            height: 2px;
-            background: var(--sumi);
-            margin: 3px 0;
-            transition: all 0.3s ease;
+        /* Vision Section */
+        .vision-section {
+            padding: 160px 0;
+            background: #0a0a0a;
+            color: white;
         }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
+        .vision-header {
+            text-align: center;
+            margin-bottom: 100px;
         }
 
-        .hamburger.active span:nth-child(2) {
+        .vision-label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 16px;
+        }
+
+        .vision-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .vision-item {
+            padding: 60px 48px;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .vision-item:first-child {
+            border-left: none;
+        }
+
+        .vision-item:hover {
+            background: rgba(255,255,255,0.03);
+        }
+
+        .vision-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+        }
+
+        .vision-icon i {
+            width: 32px;
+            height: 32px;
+        }
+
+        .vision-item h3 {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .vision-item p {
+            font-size: 14px;
+            opacity: 0.6;
+            line-height: 1.8;
+        }
+
+        /* Reveal Animation */
+        .reveal {
             opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* Mobile line breaks - hidden by default on desktop */
-        br.mobile-break {
-            display: none;
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-item {
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.1);
+                padding: 48px 24px;
+            }
+
+            .vision-item:first-child {
+                border-top: none;
+            }
         }
 
         @media (max-width: 768px) {
-            /* Show mobile breaks on mobile */
-            br.mobile-break {
-                display: inline;
-            }
-            .hamburger {
-                display: flex;
+            .page-hero {
+                min-height: 60vh;
             }
 
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: var(--shiro);
-                width: 100%;
-                padding: 2rem 0;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-                gap: 0;
-                z-index: 1001;
+            .page-hero-content {
+                padding: 0 24px;
             }
 
-            .nav-menu.active {
-                left: 0;
+            .message-section {
+                padding: 100px 0;
             }
 
-            .nav-link {
-                padding: 1rem 2rem;
+            .message-quote {
+                margin-bottom: 48px;
             }
 
-            /* セクションpadding調整 */
-            .message-main,
-            .vision-section,
-            .commitment-section {
-                padding: 3rem 0 !important;
+            .message-quote::before {
+                font-size: 5rem;
+                top: -40px;
             }
 
-            /* メッセージコンテンツ調整 */
-            .message-content {
-                padding: 2rem 1.5rem !important;
+            .vision-section {
+                padding: 100px 0;
             }
 
-            .message-title {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem !important;
-            }
-
-            .message-text {
-                font-size: 1rem !important;
-                margin-bottom: 1.5rem !important;
-            }
-
-            .message-text p {
-                margin-bottom: 1.2rem !important;
-            }
-
-            .signature-section {
-                margin-top: 2.5rem !important;
-                padding-top: 2rem !important;
-            }
-
-            .signature-name {
-                font-size: 1.5rem !important;
-            }
-
-            .signature-title {
-                font-size: 1rem !important;
-            }
-
-            /* ビジョンカード調整 */
-            .vision-cards {
-                grid-template-columns: 1fr;
-                gap: 2rem !important;
-                margin-top: 2rem !important;
-            }
-
-            .vision-card {
-                padding: 2rem 1.5rem !important;
-            }
-
-            .vision-card h3 {
-                font-size: 1.3rem !important;
-            }
-
-            .vision-icon {
-                width: 60px !important;
-                height: 60px !important;
-                font-size: 28px !important;
-            }
-
-            /* コミットメント調整 */
-            .commitment-list {
-                gap: 1.5rem !important;
-            }
-
-            .commitment-item {
-                grid-template-columns: 50px 1fr;
-                gap: 1.5rem;
-                padding: 1.5rem;
-            }
-
-            .commitment-number {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-
-            .commitment-content h3 {
-                font-size: 1.2rem !important;
-            }
-
-            .commitment-content p {
-                font-size: 0.9rem !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .message-main,
-            .vision-section,
-            .commitment-section {
-                padding: 2.5rem 0 !important;
-            }
-
-            .message-content {
-                padding: 1.5rem 1rem !important;
-            }
-
-            .message-title {
-                font-size: 1.3rem;
-            }
-
-            .message-text {
-                font-size: 0.95rem !important;
-            }
-
-            .vision-card {
-                padding: 1.5rem 1rem !important;
-            }
-
-            .vision-card h3 {
-                font-size: 1.2rem !important;
-            }
-
-            .commitment-item {
-                padding: 1.2rem;
+            .vision-header {
+                margin-bottom: 60px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- カスタムカーソル -->
-    <div class="custom-cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- ヘッダー -->
-    <header class="header" id="header">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <p>誠実と透明性で、信頼関係を築く</p>
+        </div>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-brand">
                     <a href="index.html" class="logo">
-                        <img src="Honestロゴ (2).png" alt="Honest" style="height: 50px; width: auto;">
+                        <span class="logo-text">Honest</span>
                     </a>
                 </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">ホーム</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link">事業内容</a></li>
-                    <li class="nav-item"><a href="message.html" class="nav-link active">代表メッセージ</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">お問い合わせ</a></li>
-                    <li class="nav-item"><a href="https://maison.k-honest.com/" class="nav-link nav-store" target="_blank">オンラインストア</a></li>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="message.html" class="nav-link active">MESSAGE</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li class="nav-item"><a href="https://maison.k-honest.com" class="nav-link nav-store" target="_blank">ONLINE STORE</a></li>
                 </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+
+                <button class="hamburger" aria-label="メニューを開く">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- ページヒーロー -->
+    <!-- Page Hero -->
     <section class="page-hero">
         <div class="page-hero-content">
-            <h1 class="page-hero-title">
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease forwards;">代</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.1s forwards; opacity: 0;">表</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0;">メ</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.3s forwards; opacity: 0;">ッ</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.4s forwards; opacity: 0;">セ</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.5s forwards; opacity: 0;">ー</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.6s forwards; opacity: 0;">ジ</span>
-            </h1>
-            <p class="page-hero-subtitle">CEO Message</p>
+            <p class="page-hero-label reveal">Message</p>
+            <h1 class="page-hero-title reveal">代表メッセージ</h1>
+            <p class="page-hero-text reveal">
+                誠実であること。<br>
+                それが私たちの原点です。
+            </p>
         </div>
     </section>
 
-    <!-- メッセージメイン -->
-    <section class="message-main">
-        <div class="container">
-            <div class="message-container">
-                <div class="message-content animate-on-scroll" style="margin-top: 0;">
-                    <h3 class="message-title">誠実さと透明性で、新しい価値を創造する</h3>
-                    <div class="message-text">
-                        <p>
-                            皆様、いつもお世話になっております。合同会社Honest代表の町田強平です。
-                            おかげさまで創業から1年半を迎え、<span class="message-highlight">「誠実さ」と「透明性」</span>を企業理念の中心に据え、
-                            多くのお客様に支えられながら成長を続けております。
-                        </p>
-                        <p>
-                            現代のビジネス環境は、技術革新とグローバル化により急速に変化しています。
-                            このような時代だからこそ、私たちは<span class="message-highlight">日本の伝統的な商道徳である「信頼」と「誠実さ」</span>を
-                            大切にしながら、革新的なサービスを提供していきたいと考えています。
-                        </p>
-                        <p>
-                            私自身、5年以上にわたり中小企業の経営支援に携わってまいりました。
-                            その経験から学んだことは、ビジネスの成功には技術や戦略だけでなく、
-                            <span class="message-highlight">人と人との信頼関係</span>が最も重要だということです。
-                        </p>
-                        <p>
-                            合同会社Honestは、営業サポート事業、アライアンス事業、買取・販売事業という
-                            3つの柱を通じて、お客様の事業成長を全力でサポートいたします。
-                            私たちは単なるサービス提供者ではなく、<span class="message-highlight">お客様と共に成長するパートナー</span>として、
-                            長期的な関係を築いていきたいと願っています。
-                        </p>
-                        <p>
-                            「Honest」という社名には、私たちの決意が込められています。
-                            常に誠実であること、透明性を保つこと、そして感謝の心を忘れないこと。
-                            これらの価値観を胸に、お客様、パートナー企業、そして社会全体に
-                            貢献できる企業を目指してまいります。
-                        </p>
-                        <p>
-                            今後とも、合同会社Honestをよろしくお願い申し上げます。
-                        </p>
-                    </div>
+    <!-- Message Section -->
+    <section class="message-section">
+        <div class="message-container">
+            <p class="message-quote reveal">
+                誠実であること。<br>
+                それが私たちの原点です。
+            </p>
 
-                    <div class="signature-section">
-                        <div class="signature-name">町田 強平</div>
-                        <div class="signature-title">合同会社Honest 代表社員</div>
-                    </div>
-                </div>
+            <div class="message-body reveal">
+                <p>
+                    合同会社Honestを創業するにあたり、私が最も大切にしたかったこと。それは「誠実さ」と「透明性」を事業の根幹に据えることでした。
+                </p>
+
+                <p>
+                    ビジネスの世界では、時として利益を優先するあまり、本質的な価値や信頼関係がおろそかにされることがあります。しかし、真に持続可能なビジネスは、お客様との信頼関係の上にこそ成り立つものだと、私は確信しています。
+                </p>
+
+                <p>
+                    私たちは「買取・販売事業」「営業サポート事業」「アライアンス事業」の3つの事業を通じて、お客様のビジネスに真の価値を提供することを目指しています。どの事業においても、お客様の立場に立ち、誠実に向き合うことを第一としています。
+                </p>
+
+                <p>
+                    これからも私たちは、「Honest」の名に恥じぬよう、誠実さと透明性を貫きながら、お客様と共に成長してまいります。
+                </p>
+            </div>
+
+            <div class="message-signature reveal">
+                <p class="signature-title">合同会社Honest 代表</p>
+                <p class="signature-name">町田 強平</p>
             </div>
         </div>
     </section>
 
-    <!-- ビジョン -->
+    <!-- Vision Section -->
     <section class="vision-section">
         <div class="container">
-            <div class="section-header" style="margin-bottom: 3rem;">
-                <h2 class="section-title" style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--sumi); margin-bottom: 0.5rem;">私たちが目指す未来</h2>
-                <p style="font-size: 0.9rem; color: var(--hai); letter-spacing: 0.2em; margin-top: 0.5rem;">Our Vision</p>
+            <div class="vision-header">
+                <p class="vision-label reveal">Our Vision</p>
+                <h2 class="vision-title reveal">私たちが目指すもの</h2>
             </div>
 
-            <div class="vision-cards">
-                <div class="vision-card animate-on-scroll">
-                    <div class="vision-icon">🌏</div>
-                    <h3>グローバル展開</h3>
-                    <p>
-                        日本の優れた商品・サービスを世界へ、
-                        世界の革新的なソリューションを日本へ。
-                        国境を越えたビジネスの架け橋となります。
-                    </p>
+            <div class="vision-grid">
+                <div class="vision-item reveal reveal-delay-1">
+                    <div class="vision-icon"><i data-lucide="globe"></i></div>
+                    <h3>社会への貢献</h3>
+                    <p>誠実なビジネスを通じて、社会に価値を提供し続けます。</p>
                 </div>
 
-                <div class="vision-card animate-on-scroll">
-                    <div class="vision-icon">🤝</div>
-                    <h3>共創型ビジネス</h3>
-                    <p>
-                        お客様やパートナー企業と共に新しい価値を創造。
-                        オープンイノベーションで社会課題の解決に挑戦します。
-                    </p>
+                <div class="vision-item reveal reveal-delay-2">
+                    <div class="vision-icon"><i data-lucide="handshake"></i></div>
+                    <h3>信頼の構築</h3>
+                    <p>お客様との長期的な信頼関係を最も大切にします。</p>
                 </div>
 
-                <div class="vision-card animate-on-scroll">
-                    <div class="vision-icon">🌱</div>
-                    <h3>持続可能な成長</h3>
-                    <p>
-                        環境・社会・経済の調和を重視し、
-                        次世代に誇れる持続可能なビジネスモデルを構築します。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- コミットメント -->
-    <section class="commitment-section">
-        <div class="container">
-            <div class="section-header" style="margin-bottom: 3rem;">
-                <h2 class="section-title" style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--sumi); margin-bottom: 0.5rem;">お客様へのお約束</h2>
-                <p style="font-size: 0.9rem; color: var(--hai); letter-spacing: 0.2em; margin-top: 0.5rem;">Our Commitment</p>
-            </div>
-
-            <div class="commitment-list">
-                <div class="commitment-item animate-on-scroll">
-                    <div class="commitment-number">01</div>
-                    <div class="commitment-content">
-                        <h3>誠実な対応</h3>
-                        <p>すべてのお客様に対して、誠実かつ真摯な姿勢で向き合い、最適なソリューションを提供します。</p>
-                    </div>
-                </div>
-
-                <div class="commitment-item animate-on-scroll">
-                    <div class="commitment-number">02</div>
-                    <div class="commitment-content">
-                        <h3>透明性の確保</h3>
-                        <p>サービス内容、価格、プロセスすべてにおいて透明性を保ち、明確なコミュニケーションを心がけます。</p>
-                    </div>
-                </div>
-
-                <div class="commitment-item animate-on-scroll">
-                    <div class="commitment-number">03</div>
-                    <div class="commitment-content">
-                        <h3>継続的な改善</h3>
-                        <p>お客様のフィードバックを真摯に受け止め、サービスの質を継続的に向上させていきます。</p>
-                    </div>
-                </div>
-
-                <div class="commitment-item animate-on-scroll">
-                    <div class="commitment-number">04</div>
-                    <div class="commitment-content">
-                        <h3>長期的なパートナーシップ</h3>
-                        <p>一時的な取引ではなく、お客様と共に成長する長期的なパートナーシップを築きます。</p>
-                    </div>
+                <div class="vision-item reveal reveal-delay-3">
+                    <div class="vision-icon"><i data-lucide="sprout"></i></div>
+                    <h3>持続的成長</h3>
+                    <p>お客様と共に成長し、持続可能な発展を目指します。</p>
                 </div>
             </div>
         </div>
@@ -604,50 +374,87 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <img src="Honestロゴ (2).png" alt="Honest" style="height: 60px; margin-bottom: 1rem; filter: brightness(0) invert(1); opacity: 0.9;">
-                <p style="margin-top: 1rem; opacity: 0.8; line-height: 1.8;">
-                    誠実さと透明性を基盤に、<br>
-                    日本の伝統的な商道徳を大切にしながら、<br>
-                    革新的なビジネスソリューションを提供します。
-                </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Honest</span>
+                    <p>誠実と透明性を大切に、<br>お客様との信頼関係を築きます。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="message.html">代表メッセージ</a></li>
+                        <li><a href="services.html">事業内容</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#purchase">買取・販売事業</a></li>
+                        <li><a href="services.html#sales-support">営業サポート</a></li>
+                        <li><a href="services.html#alliance">アライアンス事業</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                        <li><a href="https://maison.k-honest.com" target="_blank">オンラインストア</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-section">
-                <h4>サービス</h4>
-                <ul>
-                    <li><a href="services.html#purchase">買取・販売事業</a></li>
-                    <li><a href="services.html#sales">営業サポート事業</a></li>
-                    <li><a href="services.html#alliance">アライアンス事業</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2024 合同会社Honest. All rights reserved.</p>
+                <p>古物商許可番号: 第304362420799号</p>
             </div>
-
-            <div class="footer-section">
-                <h4>企業情報</h4>
-                <ul>
-                    <li><a href="about.html">会社概要</a></li>
-                    <li><a href="message.html">代表挨拶</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>お問い合わせ</h4>
-                <p style="opacity: 0.8; line-height: 1.8;">
-                    〒169-0072<br class="mobile-break">
-                    東京都新宿区大久保2-19-15<br class="mobile-break">
-                    TEL: 03-4500-3763<br class="mobile-break">
-                    Email: info@k-honest.com
-                </p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 合同会社Honest. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Reveal Animation
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Header scroll
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

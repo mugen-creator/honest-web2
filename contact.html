@@ -5,929 +5,574 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせ | 合同会社Honest</title>
     <meta name="description" content="合同会社Honestへのお問い合わせはこちら。営業サポート、アライアンス事業、買取・販売事業に関するご相談を承ります。">
-    <meta name="keywords" content="お問い合わせ,連絡先,合同会社Honest,ビジネス相談,買取査定">
 
     <!-- OGP Tags -->
     <meta property="og:title" content="お問い合わせ | 合同会社Honest">
-    <meta property="og:description" content="合同会社Honestへのお問い合わせはこちら。営業サポート、アライアンス事業、買取・販売事業に関するご相談を承ります。">
+    <meta property="og:description" content="合同会社Honestへのお問い合わせはこちら。">
     <meta property="og:url" content="https://k-honest.com/contact.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="合同会社Honest">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="https://k-honest.com/Honestロゴ%20(2).png">
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="お問い合わせ | 合同会社Honest">
-    <meta name="twitter:description" content="お問い合わせはこちら。ビジネス相談、買取査定を承ります。">
-    <meta name="twitter:image" content="https://k-honest.com/Honestロゴ%20(2).png">
-
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://k-honest.com/contact.html">
-
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="japanese-page-styles.css">
-    <script src="japanese-animations.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
+        /* ============================================
+           CONTACT PAGE - LUXURY MINIMAL
+           ============================================ */
+
+        /* Page Hero */
         .page-hero {
             min-height: 50vh;
-            background: linear-gradient(135deg, #f8fafb 0%, #e8f4f8 100%);
             display: flex;
             align-items: center;
-            justify-content: center;
+            background: #0a0a0a;
             position: relative;
-            padding-top: 100px;
+            padding-top: 120px;
         }
 
-        .contact-main {
-            padding: 100px 0;
-            background: var(--bg-white);
+        .page-hero-content {
+            padding: 0 8%;
         }
 
-        .contact-container {
+        .page-hero-label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+        }
+
+        .page-hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: white;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 32px;
+        }
+
+        .page-hero-text {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            line-height: 2;
+        }
+
+        /* Contact Section */
+        .contact-section {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: 1fr 420px;
+            min-height: auto;
         }
 
-        .contact-form-section {
+        /* Form Side */
+        .contact-form-wrap {
+            padding: 100px 80px;
             background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form-wrap .form-header,
+        .contact-form-wrap .contact-form {
+            width: 100%;
+            max-width: 560px;
         }
 
         .form-header {
-            margin-bottom: 3rem;
-        }
-
-        .form-title {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .form-subtitle {
-            color: var(--text-medium);
-            line-height: 1.6;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group.full-width {
-            grid-column: 1 / -1;
+            margin-bottom: 48px;
         }
 
         .form-label {
-            display: block;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-            font-size: 14px;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--cyan-600);
+            margin-bottom: 16px;
         }
 
-        .form-label .required {
-            color: #e74c3c;
+        .form-title {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: #0a0a0a;
+        }
+
+        .contact-form {
+            background: transparent;
+            padding: 0;
+            border: none;
+        }
+
+        .contact-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 0;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 24px;
+        }
+
+        .contact-form .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .contact-form .form-group label .required {
+            color: #dc2626;
             margin-left: 4px;
         }
 
-        .form-input,
-        .form-select,
-        .form-textarea {
+        .contact-form .form-input,
+        .contact-form .form-select,
+        .contact-form .form-textarea {
             width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-family: var(--font-main);
+            padding: 16px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 0;
+            font-family: var(--font-sans);
             font-size: 15px;
-            transition: var(--transition);
-            background: var(--bg-white);
+            color: #333;
+            transition: all 0.3s ease;
+            background: #fafafa;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
         }
 
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
+        .contact-form .form-input:focus,
+        .contact-form .form-select:focus,
+        .contact-form .form-textarea:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(111, 187, 211, 0.1);
+            border-color: #0a0a0a;
             background: white;
+            box-shadow: none;
         }
 
-        .form-textarea {
-            min-height: 150px;
+        .contact-form .form-textarea {
+            min-height: 180px;
             resize: vertical;
         }
 
-        .form-select {
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        .contact-form .form-select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
             background-repeat: no-repeat;
-            background-position: right 12px center;
-            background-size: 20px;
-            padding-right: 40px;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .checkbox-input {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
+            background-position: right 16px center;
+            background-size: 16px;
+            background-color: #fafafa;
+            padding-right: 48px;
             cursor: pointer;
         }
 
-        .checkbox-label {
-            cursor: pointer;
-            color: var(--text-medium);
-            font-size: 14px;
-        }
-
-        .checkbox-label a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .checkbox-label a:hover {
-            text-decoration: underline;
-        }
-
-        .submit-button {
+        .contact-form .submit-btn {
             width: 100%;
-            padding: 16px 32px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            padding: 20px;
+            background: #0a0a0a;
             color: white;
             border: none;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: 600;
+            border-radius: 0;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             cursor: pointer;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
+            transition: all 0.4s ease;
+            margin-top: 8px;
         }
 
-        .submit-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(111, 187, 211, 0.3);
+        .contact-form .submit-btn:hover {
+            background: var(--cyan-600);
         }
 
-        .submit-button:active {
-            transform: translateY(0);
+        /* Info Side */
+        .contact-info-wrap {
+            background: #fafafa;
+            padding: 100px 60px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .contact-info-section {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
+        .info-header {
+            margin-bottom: 48px;
         }
 
-        .info-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow-md);
-            margin-bottom: 2rem;
+        .info-label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--cyan-600);
+            margin-bottom: 16px;
         }
 
-        .info-card-title {
-            font-family: var(--font-heading);
+        .info-title {
+            font-family: var(--font-serif);
             font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 1rem;
+            color: #0a0a0a;
         }
 
-        .info-card-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 30px;
-            height: 3px;
-            background: var(--primary-color);
+        .info-list {
+            flex: 1;
         }
 
         .info-item {
             display: flex;
-            align-items: start;
-            margin-bottom: 1.5rem;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
         }
 
         .info-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-            flex-shrink: 0;
-            color: white;
-            font-size: 18px;
-        }
-
-        .info-content {
-            flex: 1;
-        }
-
-        .info-label {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.25rem;
-            font-size: 14px;
-        }
-
-        .info-value {
-            color: var(--text-medium);
-            line-height: 1.6;
-        }
-
-        .info-value a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .info-value a:hover {
-            color: var(--primary-dark);
-            text-decoration: underline;
-        }
-
-        .quick-contact {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .quick-contact-title {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .quick-contact-phone {
-            font-size: 2rem;
-            font-weight: 700;
-            font-family: var(--font-english);
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .quick-contact-hours {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        .faq-section {
-            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
-            padding: 100px 0;
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
+            width: 48px;
+            height: 48px;
             background: white;
-            border-radius: 15px;
-            margin-bottom: 1.5rem;
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .faq-item:hover {
-            box-shadow: var(--shadow-md);
-        }
-
-        .faq-question {
-            padding: 1.5rem 2rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: var(--text-dark);
-            transition: var(--transition);
-        }
-
-        .faq-question:hover {
-            background: var(--bg-light);
-        }
-
-        .faq-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: var(--transition);
+            flex-shrink: 0;
+            color: var(--cyan-600);
         }
 
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
+        .info-icon i {
+            width: 20px;
+            height: 20px;
         }
 
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
+        .info-content h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
         }
 
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-        }
-
-        .faq-answer-content {
-            padding: 0 2rem 2rem;
-            color: var(--text-medium);
+        .info-content p,
+        .info-content a {
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
             line-height: 1.7;
         }
 
-        @media (max-width: 968px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info-section {
-                position: static;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+        .info-content a:hover {
+            color: var(--cyan-600);
         }
 
-        @media (max-width: 480px) {
-            .contact-form-section {
-                padding: 2rem 1.5rem;
-            }
-
-            .info-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .quick-contact-phone {
-                font-size: 1.5rem;
-            }
+        /* Map */
+        .map-container {
+            margin-top: 48px;
+            background: white;
+            overflow: hidden;
         }
 
-        /* ハンバーガーメニュー - indexと同じコード */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 5px;
+        .map-container iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
         }
 
-        .hamburger span {
-            width: 25px;
-            height: 2px;
-            background: var(--sumi);
-            margin: 3px 0;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .hamburger.active span:nth-child(2) {
+        /* Reveal Animation */
+        .reveal {
             opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* Mobile line breaks - hidden by default on desktop */
-        br.mobile-break {
-            display: none;
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info-wrap {
+                order: -1;
+            }
+
+            .contact-form-wrap {
+                padding: 80px 40px;
+            }
+
+            .contact-info-wrap {
+                padding: 60px 40px;
+            }
+
+            .contact-form-wrap .form-header,
+            .contact-form-wrap .contact-form {
+                max-width: 100%;
+            }
         }
 
         @media (max-width: 768px) {
-            /* Show mobile breaks on mobile */
-            br.mobile-break {
-                display: inline;
-            }
-            .hamburger {
-                display: flex;
+            .page-hero {
+                min-height: 40vh;
             }
 
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: var(--shiro);
-                width: 100%;
-                padding: 2rem 0;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-                gap: 0;
-                z-index: 1001;
+            .page-hero-content {
+                padding: 0 24px;
             }
 
-            .nav-menu.active {
-                left: 0;
+            .contact-form-wrap {
+                padding: 60px 24px;
             }
 
-            .nav-link {
-                padding: 1rem 2rem;
+            .contact-info-wrap {
+                padding: 48px 24px;
             }
 
-            /* セクションpadding調整 */
-            .contact-main,
-            .faq-section {
-                padding: 3rem 0 !important;
-            }
-
-            /* フォームセクション調整 */
-            .contact-form-section {
-                padding: 2rem 1.5rem !important;
-            }
-
-            .form-title {
-                font-size: 1.5rem !important;
-            }
-
-            .form-subtitle {
-                font-size: 0.9rem !important;
-            }
-
-            .form-group {
-                margin-bottom: 1.5rem !important;
-            }
-
-            .form-label {
-                font-size: 0.9rem !important;
-            }
-
-            .form-input,
-            .form-select,
-            .form-textarea {
-                font-size: 0.95rem !important;
-                padding: 10px 14px !important;
-            }
-
-            /* 情報カード調整 */
-            .info-card {
-                padding: 2rem 1.5rem !important;
-            }
-
-            .info-card-title {
-                font-size: 1.3rem !important;
-            }
-
-            .info-item {
-                margin-bottom: 1.2rem !important;
-            }
-
-            .quick-contact {
-                padding: 1.5rem !important;
-            }
-
-            .quick-contact-title {
-                font-size: 1.1rem !important;
-            }
-
-            .quick-contact-phone {
-                font-size: 1.8rem !important;
-            }
-
-            /* FAQ調整 */
-            .faq-item {
-                margin-bottom: 1.2rem !important;
-            }
-
-            .faq-question {
-                padding: 1.2rem 1.5rem !important;
-                font-size: 0.95rem !important;
-            }
-
-            .faq-answer-content {
-                padding: 0 1.5rem 1.5rem !important;
-                font-size: 0.9rem !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .contact-main,
-            .faq-section {
-                padding: 2.5rem 0 !important;
-            }
-
-            .contact-form-section {
-                padding: 1.5rem 1rem !important;
-            }
-
-            .form-title {
-                font-size: 1.3rem !important;
-            }
-
-            .info-card {
-                padding: 1.5rem 1rem !important;
-            }
-
-            .quick-contact-phone {
-                font-size: 1.5rem !important;
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
             }
         }
     </style>
-
-    <!-- 構造化データ（JSON-LD） -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "合同会社Honest",
-        "url": "https://k-honest.com/",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+81-3-5937-1337",
-          "email": "info@k-honest.com",
-          "contactType": "Customer Service",
-          "availableLanguage": ["Japanese"],
-          "areaServed": "JP"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "大久保2丁目19-15 サンフォレスト405号室",
-          "addressLocality": "新宿区",
-          "addressRegion": "東京都",
-          "postalCode": "169-0072",
-          "addressCountry": "JP"
-        }
-      }
-    }
-    </script>
 </head>
 <body>
-    <!-- カスタムカーソル -->
-    <div class="custom-cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- ヘッダー -->
-    <header class="header" id="header">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <p>誠実と透明性で、信頼関係を築く</p>
+        </div>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-brand">
                     <a href="index.html" class="logo">
-                        <img src="Honestロゴ (2).png" alt="Honest" style="height: 50px; width: auto;">
+                        <span class="logo-text">Honest</span>
                     </a>
                 </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">ホーム</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link">事業内容</a></li>
-                    <li class="nav-item"><a href="message.html" class="nav-link">代表メッセージ</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link active">お問い合わせ</a></li>
-                    <li class="nav-item"><a href="https://maison.k-honest.com/" class="nav-link nav-store" target="_blank">オンラインストア</a></li>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="message.html" class="nav-link">MESSAGE</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">CONTACT</a></li>
+                    <li class="nav-item"><a href="https://maison.k-honest.com" class="nav-link nav-store" target="_blank">ONLINE STORE</a></li>
                 </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+
+                <button class="hamburger" aria-label="メニューを開く">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- ページヒーロー -->
+    <!-- Page Hero -->
     <section class="page-hero">
         <div class="page-hero-content">
-            <h1 class="page-hero-title">
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease forwards;">お</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.1s forwards; opacity: 0;">問</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0;">い</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.3s forwards; opacity: 0;">合</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.4s forwards; opacity: 0;">わ</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.5s forwards; opacity: 0;">せ</span>
-            </h1>
-            <p class="page-hero-subtitle">Contact Us</p>
+            <p class="page-hero-label reveal">Contact</p>
+            <h1 class="page-hero-title reveal">お問い合わせ</h1>
+            <p class="page-hero-text reveal">
+                サービスに関するご質問・ご相談は、<br>
+                お気軽にお問い合わせください。
+            </p>
         </div>
     </section>
 
-    <!-- お問い合わせメイン -->
-    <section class="contact-main">
-        <div class="container">
-            <div class="contact-container">
-                <!-- お問い合わせフォーム -->
-                <div class="contact-form-section animate-on-scroll">
-                    <div class="form-header">
-                        <h2 class="form-title">お問い合わせフォーム</h2>
-                        <p class="form-subtitle">
-                            下記フォームに必要事項をご記入の上、送信してください。<br>
-                            内容を確認後、担当者より2営業日以内にご連絡させていただきます。
-                        </p>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Form -->
+        <div class="contact-form-wrap">
+            <div class="form-header reveal">
+                <p class="form-label">Send Message</p>
+                <h2 class="form-title">お問い合わせフォーム</h2>
+            </div>
+
+            <form name="contact" method="POST" data-netlify="true" action="/contact-success.html" class="contact-form">
+                <input type="hidden" name="form-name" value="contact">
+
+                <div class="form-row">
+                    <div class="form-group reveal">
+                        <label>お名前<span class="required">*</span></label>
+                        <input type="text" name="name" class="form-input" required>
                     </div>
-
-                    <form id="contactForm" name="contact" method="POST" action="/contact-success.html" data-netlify="true" netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact" />
-                        <div style="display: none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">
-                                    お名前<span class="required">*</span>
-                                </label>
-                                <input type="text" class="form-input" name="name" required placeholder="山田 太郎">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">
-                                    会社名
-                                </label>
-                                <input type="text" class="form-input" name="company" placeholder="株式会社サンプル">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">
-                                    メールアドレス<span class="required">*</span>
-                                </label>
-                                <input type="email" class="form-input" name="email" required placeholder="example@email.com">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">
-                                    電話番号
-                                </label>
-                                <input type="tel" class="form-input" name="phone" placeholder="03-1234-5678">
-                            </div>
-                        </div>
-
-                        <div class="form-group full-width">
-                            <label class="form-label">
-                                お問い合わせ種別<span class="required">*</span>
-                            </label>
-                            <select class="form-select" name="type" required>
-                                <option value="">選択してください</option>
-                                <option value="営業サポート">営業サポート事業について</option>
-                                <option value="アライアンス">アライアンス事業について</option>
-                                <option value="買取査定">買取査定のご依頼</option>
-                                <option value="採用">採用について</option>
-                                <option value="その他">その他</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group full-width">
-                            <label class="form-label">
-                                件名<span class="required">*</span>
-                            </label>
-                            <input type="text" class="form-input" name="subject" required placeholder="お問い合わせの件名">
-                        </div>
-
-                        <div class="form-group full-width">
-                            <label class="form-label">
-                                お問い合わせ内容<span class="required">*</span>
-                            </label>
-                            <textarea class="form-textarea" name="message" required rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
-                        </div>
-
-                        <div class="checkbox-group">
-                            <input type="checkbox" class="checkbox-input" id="privacy" required>
-                            <label for="privacy" class="checkbox-label">
-                                <a href="privacy-policy.html">プライバシーポリシー</a>に同意する
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn-japanese btn-japanese-primary submit-button">
-                            <span>送信する</span>
-                        </button>
-                    </form>
+                    <div class="form-group reveal">
+                        <label>会社名</label>
+                        <input type="text" name="company" class="form-input">
+                    </div>
                 </div>
 
-                <!-- 連絡先情報 -->
-                <div class="contact-info-section">
-                    <div class="info-card animate-on-scroll">
-                        <h3 class="info-card-title">連絡先情報</h3>
-
-                        <div class="info-item">
-                            <div class="info-icon">📍</div>
-                            <div class="info-content">
-                                <div class="info-label">所在地</div>
-                                <div class="info-value">
-                                    〒169-0072<br>
-                                    東京都新宿区大久保２丁目１９－１５<br class="mobile-break">
-                                    サンフォレスト４０５号室
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="info-icon">📞</div>
-                            <div class="info-content">
-                                <div class="info-label">電話番号</div>
-                                <div class="info-value">
-                                    <a href="tel:03-4500-3763">03-4500-3763</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="info-icon">📧</div>
-                            <div class="info-content">
-                                <div class="info-label">メールアドレス</div>
-                                <div class="info-value">
-                                    <a href="mailto:info@k-honest.com">info@k-honest.com</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="info-icon">🕐</div>
-                            <div class="info-content">
-                                <div class="info-label">営業時間</div>
-                                <div class="info-value">
-                                    平日 9:00～18:00<br>
-                                    土日祝日 休業
-                                </div>
-                            </div>
-                        </div>
+                <div class="form-row">
+                    <div class="form-group reveal">
+                        <label>メールアドレス<span class="required">*</span></label>
+                        <input type="email" name="email" class="form-input" required>
                     </div>
+                    <div class="form-group reveal">
+                        <label>電話番号</label>
+                        <input type="tel" name="phone" class="form-input">
+                    </div>
+                </div>
 
-                    <div class="quick-contact animate-on-scroll">
-                        <div class="quick-contact-title">お急ぎの方はお電話で</div>
-                        <a href="tel:03-4500-3763" class="quick-contact-phone">03-4500-3763</a>
-                        <div class="quick-contact-hours">受付時間: 平日 9:00-18:00</div>
+                <div class="form-group full reveal">
+                    <label>お問い合わせ種別<span class="required">*</span></label>
+                    <select name="category" class="form-select" required>
+                        <option value="">選択してください</option>
+                        <option value="purchase">買取・販売について</option>
+                        <option value="sales">営業サポートについて</option>
+                        <option value="alliance">アライアンス事業について</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
+                <div class="form-group full reveal">
+                    <label>お問い合わせ内容<span class="required">*</span></label>
+                    <textarea name="message" class="form-textarea" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn reveal">送信する</button>
+            </form>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info-wrap">
+            <div class="info-header reveal">
+                <p class="info-label">Information</p>
+                <h3 class="info-title">お問い合わせ先</h3>
+            </div>
+
+            <div class="info-list">
+                <div class="info-item reveal">
+                    <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                    <div class="info-content">
+                        <h4>所在地</h4>
+                        <p>〒169-0072<br>東京都新宿区大久保2-19-15</p>
+                    </div>
+                </div>
+
+                <div class="info-item reveal">
+                    <div class="info-icon"><i data-lucide="phone"></i></div>
+                    <div class="info-content">
+                        <h4>電話番号</h4>
+                        <a href="tel:03-4500-3763">03-4500-3763</a>
+                    </div>
+                </div>
+
+                <div class="info-item reveal">
+                    <div class="info-icon"><i data-lucide="mail"></i></div>
+                    <div class="info-content">
+                        <h4>メール</h4>
+                        <a href="mailto:info@k-honest.com">info@k-honest.com</a>
+                    </div>
+                </div>
+
+                <div class="info-item reveal">
+                    <div class="info-icon"><i data-lucide="clock"></i></div>
+                    <div class="info-content">
+                        <h4>営業時間</h4>
+                        <p>平日 10:00 - 18:00<br>土日祝日休み</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- よくあるご質問 -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="faq-container">
-                <div class="section-header" style="margin-bottom: 3rem;">
-                    <h2 class="section-title" style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--sumi); margin-bottom: 0.5rem;">よくあるご質問</h2>
-                    <p style="font-size: 0.9rem; color: var(--hai); letter-spacing: 0.2em; margin-top: 0.5rem;">FAQ</p>
-                </div>
-
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>営業サポートの具体的な内容を教えてください</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            営業戦略の立案から実行まで、包括的な支援を提供します。
-                            新規開拓、既存顧客の深耕、営業プロセスの最適化、営業研修など、
-                            お客様のニーズに合わせてカスタマイズいたします。
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>買取査定は無料ですか？</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            はい、査定は完全無料です。査定後のキャンセルも可能ですので、
-                            お気軽にご相談ください。出張査定も承っております。
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>アライアンス事業の成功事例はありますか？</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            多数の成功事例がございます。技術提携、販売提携、海外展開など、
-                            様々な形でのアライアンス構築を支援してきました。
-                            詳細は個別にご案内させていただきます。
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>相談は無料ですか？</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            初回のご相談は無料です。お客様の課題をヒアリングし、
-                            最適なソリューションをご提案させていただきます。
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>対応エリアを教えてください</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            全国対応可能です。オンラインでの打ち合わせも実施しておりますので、
-                            遠方のお客様もお気軽にご相談ください。
-                        </div>
-                    </div>
-                </div>
+            <div class="map-container reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8731549371!2d139.70346837677067!3d35.70336447258163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d2b5b3f0001%3A0x1c5c5c5c5c5c5c5c!2z5p2x5Lqs6YO95paw5a6_5Yy65aSn5LmF5L-dMi0xOS0xNQ!5e0!3m2!1sja!2sjp!4v1234567890"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <img src="Honestロゴ (2).png" alt="Honest" style="height: 60px; margin-bottom: 1rem; filter: brightness(0) invert(1); opacity: 0.9;">
-                <p style="margin-top: 1rem; opacity: 0.8; line-height: 1.8;">
-                    誠実さと透明性を基盤に、<br>
-                    日本の伝統的な商道徳を大切にしながら、<br>
-                    革新的なビジネスソリューションを提供します。
-                </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Honest</span>
+                    <p>誠実と透明性を大切に、<br>お客様との信頼関係を築きます。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="message.html">代表メッセージ</a></li>
+                        <li><a href="services.html">事業内容</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#purchase">買取・販売事業</a></li>
+                        <li><a href="services.html#sales-support">営業サポート</a></li>
+                        <li><a href="services.html#alliance">アライアンス事業</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                        <li><a href="https://maison.k-honest.com" target="_blank">オンラインストア</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-section">
-                <h4>サービス</h4>
-                <ul>
-                    <li><a href="services.html#purchase">買取・販売事業</a></li>
-                    <li><a href="services.html#sales">営業サポート事業</a></li>
-                    <li><a href="services.html#alliance">アライアンス事業</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2024 合同会社Honest. All rights reserved.</p>
+                <p>古物商許可番号: 第304362420799号</p>
             </div>
-
-            <div class="footer-section">
-                <h4>企業情報</h4>
-                <ul>
-                    <li><a href="about.html">会社概要</a></li>
-                    <li><a href="message.html">代表挨拶</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                    <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>お問い合わせ</h4>
-                <p style="opacity: 0.8; line-height: 1.8;">
-                    〒169-0072<br>
-                    東京都新宿区大久保2-19-15<br>
-                    TEL: 03-4500-3763<br>
-                    Email: info@k-honest.com
-                </p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 合同会社Honest. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
     <script>
-        // FAQ アコーディオン
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                item.classList.toggle('active');
+        lucide.createIcons();
 
-                // 他のアイテムを閉じる
-                document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
+        // Reveal Animation
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Header scroll
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             });
         });
     </script>

@@ -5,849 +5,731 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>事業内容 | 合同会社Honest</title>
     <meta name="description" content="合同会社Honestの事業内容：営業サポート事業、アライアンス事業、買取・販売事業を通じて、お客様のビジネス成長をサポートします。">
-    <meta name="keywords" content="営業サポート,アライアンス事業,買取・販売事業,ブランド品買取,ブランド品販売,機械式時計,ビジネスソリューション">
 
     <!-- OGP Tags -->
     <meta property="og:title" content="事業内容 | 合同会社Honest">
     <meta property="og:description" content="営業サポート事業、アライアンス事業、買取・販売事業を通じてお客様のビジネス成長をサポート。">
     <meta property="og:url" content="https://k-honest.com/services.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="合同会社Honest">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="https://k-honest.com/Honestロゴ%20(2).png">
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="事業内容 | 合同会社Honest">
-    <meta name="twitter:description" content="営業サポート事業、アライアンス事業、買取・販売事業を展開。">
-    <meta name="twitter:image" content="https://k-honest.com/Honestロゴ%20(2).png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="japanese-page-styles.css">
-    <script src="japanese-animations.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
+        /* ============================================
+           SERVICES PAGE - LUXURY MINIMAL
+           ============================================ */
+
+        /* Page Hero */
         .page-hero {
-            min-height: 50vh;
-            background: linear-gradient(135deg, #f8fafb 0%, #e8f4f8 100%);
+            min-height: 70vh;
             display: flex;
             align-items: center;
-            justify-content: center;
+            background: #0a0a0a;
             position: relative;
-            padding-top: 100px;
+            padding-top: 120px;
         }
 
+        .page-hero-content {
+            padding: 0 8%;
+        }
+
+        .page-hero-label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+        }
+
+        .page-hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: white;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 32px;
+        }
+
+        .page-hero-text {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            line-height: 2;
+            max-width: 500px;
+        }
+
+        /* Service Panel - Full Screen */
+        .service-panel {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-panel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .service-panel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.5) 100%);
+        }
+
+        .service-panel-inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 0 8%;
+        }
+
+        .service-panel-num {
+            font-family: var(--font-display);
+            font-size: clamp(6rem, 15vw, 12rem);
+            font-weight: 400;
+            color: rgba(255,255,255,0.06);
+            line-height: 1;
+            margin-bottom: -40px;
+        }
+
+        .service-panel-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: white;
+            font-weight: 500;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .service-panel-subtitle {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 40px;
+        }
+
+        .service-panel-text {
+            font-size: 16px;
+            line-height: 2.2;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin-bottom: 48px;
+        }
+
+        .service-panel-features {
+            display: flex;
+            gap: 48px;
+            margin-bottom: 56px;
+            flex-wrap: wrap;
+        }
+
+        .service-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+
+        .service-feature i {
+            width: 20px;
+            height: 20px;
+            color: var(--gold);
+        }
+
+        .service-panel-btn {
+            display: inline-block;
+            padding: 20px 56px;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+        }
+
+        .service-panel-btn:hover {
+            background: white;
+            color: #0a0a0a;
+            border-color: white;
+        }
+
+        /* Alternating Layout */
+        .service-panel:nth-child(even) .service-panel-inner {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .service-panel:nth-child(even) .service-panel-text {
+            margin-left: auto;
+        }
+
+        .service-panel:nth-child(even) .service-panel-features {
+            justify-content: flex-end;
+        }
+
+        /* Service Detail Section */
         .service-detail {
-            padding: 100px 0;
-            background: var(--bg-white);
+            padding: 160px 0;
+            background: white;
         }
 
         .service-detail:nth-child(even) {
-            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+            background: #fafafa;
         }
 
-        .service-main-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            margin-bottom: 5rem;
-            transition: var(--transition);
+        .detail-header {
+            margin-bottom: 80px;
         }
 
-        .service-main-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(111, 187, 211, 0.15);
+        .detail-label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--cyan-600);
+            margin-bottom: 16px;
         }
 
-        .service-main-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            padding: 3rem;
-            position: relative;
-            overflow: hidden;
+        .detail-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #0a0a0a;
         }
 
-        .service-main-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-
-        .service-number {
-            font-family: var(--font-english);
-            font-size: 5rem;
-            opacity: 0.3;
-            position: absolute;
-            top: 20px;
-            right: 30px;
-        }
-
-        .service-main-title {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-
-        .service-main-subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            position: relative;
-        }
-
-        .service-main-body {
-            padding: 3rem;
-        }
-
-        .service-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-medium);
-            margin-bottom: 3rem;
-        }
-
-        .service-features {
+        .detail-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
         }
 
-        .feature-item {
-            padding: 2rem;
-            background: var(--bg-light);
-            border-radius: 15px;
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .feature-item:hover {
+        .detail-item {
+            padding: 40px 32px;
             background: white;
-            box-shadow: var(--shadow-md);
-            transform: translateY(-3px);
+            border: 1px solid #eee;
+            transition: all 0.4s ease;
         }
 
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-            border-radius: 50%;
+        .service-detail:nth-child(even) .detail-item {
+            background: #fafafa;
+        }
+
+        .detail-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .detail-item-icon {
+            width: 48px;
+            height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 24px;
+            color: var(--cyan-600);
+        }
+
+        .detail-item-icon i {
+            width: 28px;
+            height: 28px;
+        }
+
+        .detail-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0a0a0a;
+            margin-bottom: 12px;
+        }
+
+        .detail-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 160px 0;
+            background: #0a0a0a;
             color: white;
-            font-size: 24px;
         }
 
-        .feature-title {
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
+        .process-header {
+            text-align: center;
+            margin-bottom: 100px;
         }
 
-        .service-process {
-            margin: 4rem 0;
+        .process-label {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 16px;
         }
 
         .process-title {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            color: var(--text-dark);
-            margin-bottom: 2rem;
-            text-align: center;
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3rem);
         }
 
-        .process-steps {
+        .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-item {
+            padding: 48px 32px;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
             position: relative;
         }
 
-        .process-step {
-            text-align: center;
-            position: relative;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
+        .process-item:first-child {
+            border-left: none;
         }
 
-        .process-step:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-3px);
+        .process-item::after {
+            content: '';
+            position: absolute;
+            top: 48px;
+            right: 0;
+            width: 24px;
+            height: 1px;
+            background: rgba(255,255,255,0.2);
         }
 
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-weight: 700;
+        .process-item:last-child::after {
+            display: none;
         }
 
-        .step-title {
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
+        .process-num {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: rgba(255,255,255,0.1);
+            margin-bottom: 24px;
         }
 
-        .service-examples {
-            background: var(--bg-light);
-            padding: 3rem;
-            border-radius: 15px;
-            margin: 3rem 0;
+        .process-item h4 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 12px;
         }
 
-        .examples-title {
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 2rem;
+        .process-item p {
+            font-size: 13px;
+            opacity: 0.5;
         }
 
-        .example-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .example-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-color);
-            transition: var(--transition);
-        }
-
-        .example-item:hover {
-            transform: translateX(5px);
-            box-shadow: var(--shadow-sm);
-        }
-
+        /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            padding: 80px 0;
+            padding: 200px 0;
+            background: #fafafa;
             text-align: center;
         }
 
         .cta-title {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #0a0a0a;
+            margin-bottom: 24px;
         }
 
-        .cta-description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+        .cta-text {
+            font-size: 15px;
+            color: #888;
+            margin-bottom: 56px;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 2rem;
+            gap: 24px;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
-        .btn-white {
-            background: white;
-            color: var(--primary-color);
-            padding: 16px 36px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
+        .cta-buttons .btn {
+            padding: 20px 56px;
+            font-size: 12px;
+            letter-spacing: 2px;
         }
 
-        .btn-white:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        /* ハンバーガーメニュー - indexと同じコード */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 5px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 2px;
-            background: var(--sumi);
-            margin: 3px 0;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .hamburger.active span:nth-child(2) {
+        /* Reveal Animation */
+        .reveal {
             opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* Mobile line breaks - hidden by default on desktop */
-        br.mobile-break {
-            display: none;
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .detail-grid,
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-item {
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .process-item:nth-child(1),
+            .process-item:nth-child(2) {
+                border-top: none;
+            }
+
+            .process-item:nth-child(odd) {
+                border-left: none;
+            }
+
+            .process-item::after {
+                display: none;
+            }
+
+            .service-panel:nth-child(even) .service-panel-inner {
+                margin-left: 0;
+                text-align: left;
+            }
+
+            .service-panel:nth-child(even) .service-panel-text {
+                margin-left: 0;
+            }
+
+            .service-panel:nth-child(even) .service-panel-features {
+                justify-content: flex-start;
+            }
         }
 
         @media (max-width: 768px) {
-            /* Show mobile breaks on mobile */
-            br.mobile-break {
-                display: inline;
-            }
-            .hamburger {
-                display: flex;
+            .page-hero {
+                min-height: 60vh;
             }
 
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
+            .page-hero-content {
+                padding: 0 24px;
+            }
+
+            .service-panel {
+                min-height: 80vh;
+            }
+
+            .service-panel-bg {
+                background-attachment: scroll;
+            }
+
+            .service-panel-inner {
+                padding: 0 24px;
+            }
+
+            .service-panel-num {
+                margin-bottom: -20px;
+            }
+
+            .service-panel-features {
                 flex-direction: column;
-                background: var(--shiro);
-                width: 100%;
-                padding: 2rem 0;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-                gap: 0;
-                z-index: 1001;
+                gap: 16px;
             }
 
-            .nav-menu.active {
-                left: 0;
+            .detail-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
             }
 
-            .nav-link {
-                padding: 1rem 2rem;
-                display: block;
+            .process-item {
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.1);
             }
 
-            /* セクションpadding調整 */
-            .service-detail,
+            .process-item:first-child {
+                border-top: none;
+            }
+
+            .service-detail {
+                padding: 100px 0;
+            }
+
+            .process-section {
+                padding: 100px 0;
+            }
+
             .cta-section {
-                padding: 3rem 0 !important;
+                padding: 120px 24px;
             }
 
-            /* メインカード調整 */
-            .service-main-header {
-                padding: 2rem 1.5rem !important;
-            }
-
-            .service-main-body {
-                padding: 2rem 1.5rem !important;
-            }
-
-            .service-main-title {
-                font-size: 1.8rem;
-            }
-
-            .service-main-subtitle {
-                font-size: 0.95rem !important;
-            }
-
-            .service-number {
-                font-size: 3rem;
-            }
-
-            .service-description {
-                font-size: 1rem !important;
-                margin-bottom: 2rem !important;
-            }
-
-            .service-features {
-                grid-template-columns: 1fr;
-                gap: 1.5rem !important;
-                margin: 2rem 0 !important;
-            }
-
-            .feature-item {
-                padding: 1.5rem !important;
-            }
-
-            .service-process {
-                margin: 2.5rem 0 !important;
-            }
-
-            .process-title {
-                font-size: 1.5rem !important;
-                margin-bottom: 1.5rem !important;
-            }
-
-            .process-steps {
-                grid-template-columns: 1fr;
-                gap: 1.5rem !important;
-            }
-
-            .process-step {
-                padding: 1.2rem !important;
-            }
-
-            .service-examples {
-                padding: 2rem 1.5rem !important;
-                margin: 2rem 0 !important;
-            }
-
-            .examples-title {
-                font-size: 1.3rem !important;
-                margin-bottom: 1.5rem !important;
-            }
-
-            .example-list {
-                grid-template-columns: 1fr;
-                gap: 1.2rem !important;
-            }
-
-            .example-item {
-                padding: 1.2rem !important;
-            }
-
-            .example-item h4 {
-                font-size: 1.1rem !important;
-            }
-
-            .example-item p {
-                font-size: 0.85rem !important;
-            }
-
-            .cta-title {
-                font-size: 1.8rem;
-            }
-
-            .cta-description {
-                font-size: 1rem !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .service-detail,
-            .cta-section {
-                padding: 2.5rem 0 !important;
-            }
-
-            .service-main-header {
-                padding: 1.5rem 1rem !important;
-            }
-
-            .service-main-body {
-                padding: 1.5rem 1rem !important;
-            }
-
-            .service-main-title {
-                font-size: 1.5rem;
-            }
-
-            .service-number {
-                font-size: 2.5rem;
-            }
-
-            .cta-title {
-                font-size: 1.5rem;
-            }
-
-            .cta-description {
-                font-size: 0.9rem !important;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- カスタムカーソル -->
-    <div class="custom-cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- ヘッダー -->
-    <header class="header" id="header">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <p>誠実と透明性で、信頼関係を築く</p>
+        </div>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-brand">
                     <a href="index.html" class="logo">
-                        <img src="Honestロゴ (2).png" alt="Honest" style="height: 50px; width: auto;">
+                        <span class="logo-text">Honest</span>
                     </a>
                 </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">ホーム</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link active">事業内容</a></li>
-                    <li class="nav-item"><a href="message.html" class="nav-link">代表メッセージ</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">お問い合わせ</a></li>
-                    <li class="nav-item"><a href="https://maison.k-honest.com/" class="nav-link nav-store" target="_blank">オンラインストア</a></li>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">SERVICES</a></li>
+                    <li class="nav-item"><a href="message.html" class="nav-link">MESSAGE</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li class="nav-item"><a href="https://maison.k-honest.com" class="nav-link nav-store" target="_blank">ONLINE STORE</a></li>
                 </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+
+                <button class="hamburger" aria-label="メニューを開く">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- ページヒーロー -->
+    <!-- Page Hero -->
     <section class="page-hero">
         <div class="page-hero-content">
-            <h1 class="page-hero-title">
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease forwards;">事</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.1s forwards; opacity: 0;">業</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0;">内</span>
-                <span style="display: inline-block; animation: fadeInUp 0.8s ease 0.3s forwards; opacity: 0;">容</span>
-            </h1>
-            <p class="page-hero-subtitle">Our Services</p>
+            <p class="page-hero-label reveal">Our Services</p>
+            <h1 class="page-hero-title reveal">事業内容</h1>
+            <p class="page-hero-text reveal">
+                3つの事業を通じて、<br>
+                お客様のビジネスに真の価値を提供します。
+            </p>
         </div>
     </section>
 
-    <!-- 買取・販売事業 -->
-    <section id="purchase" class="service-detail">
+    <!-- Service 01: 買取・販売 -->
+    <section id="purchase" class="service-panel">
+        <div class="service-panel-bg" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1920&q=80');"></div>
+        <div class="service-panel-overlay"></div>
+        <div class="service-panel-inner">
+            <p class="service-panel-num reveal">01</p>
+            <h2 class="service-panel-title reveal">買取・販売事業</h2>
+            <p class="service-panel-subtitle reveal">Luxury Goods Purchase & Sales</p>
+            <p class="service-panel-text reveal">
+                ブランド品、高級時計、ジュエリーなどの高価買取から、厳選されたアイテムのオンライン販売まで。専門の鑑定士が適正価格で査定・買取し、品質にこだわった商品を提供しています。
+            </p>
+            <div class="service-panel-features reveal">
+                <span class="service-feature"><i data-lucide="gem"></i> 高額査定</span>
+                <span class="service-feature"><i data-lucide="zap"></i> 即日現金化</span>
+                <span class="service-feature"><i data-lucide="shield-check"></i> 品質保証</span>
+            </div>
+            <a href="https://maison.k-honest.com/" target="_blank" class="service-panel-btn reveal">View Online Store</a>
+        </div>
+    </section>
+
+    <!-- Service 02: 営業サポート -->
+    <section id="sales-support" class="service-panel">
+        <div class="service-panel-bg" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80');"></div>
+        <div class="service-panel-overlay"></div>
+        <div class="service-panel-inner">
+            <p class="service-panel-num reveal">02</p>
+            <h2 class="service-panel-title reveal">営業サポート事業</h2>
+            <p class="service-panel-subtitle reveal">Sales Support Service</p>
+            <p class="service-panel-text reveal">
+                中小企業の営業力強化をトータルサポート。経験豊富な営業プロフェッショナルが、お客様の営業戦略立案から実行まで、包括的な支援を提供します。
+            </p>
+            <div class="service-panel-features reveal">
+                <span class="service-feature"><i data-lucide="bar-chart-3"></i> 戦略立案</span>
+                <span class="service-feature"><i data-lucide="target"></i> 新規開拓</span>
+                <span class="service-feature"><i data-lucide="users"></i> 営業研修</span>
+            </div>
+            <a href="contact.html" class="service-panel-btn reveal">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Service 03: アライアンス -->
+    <section id="alliance" class="service-panel">
+        <div class="service-panel-bg" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80');"></div>
+        <div class="service-panel-overlay"></div>
+        <div class="service-panel-inner">
+            <p class="service-panel-num reveal">03</p>
+            <h2 class="service-panel-title reveal">アライアンス事業</h2>
+            <p class="service-panel-subtitle reveal">Strategic Alliance Service</p>
+            <p class="service-panel-text reveal">
+                企業間の戦略的提携をコーディネート。異業種・同業種問わず、シナジーを生み出す最適なパートナーシップを構築します。
+            </p>
+            <div class="service-panel-features reveal">
+                <span class="service-feature"><i data-lucide="handshake"></i> マッチング</span>
+                <span class="service-feature"><i data-lucide="file-text"></i> 契約支援</span>
+                <span class="service-feature"><i data-lucide="rocket"></i> 事業開発</span>
+            </div>
+            <a href="contact.html" class="service-panel-btn reveal">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
         <div class="container">
-            <div class="service-main-card animate-on-scroll">
-                <div class="service-main-header">
-                    <span class="service-number">01</span>
-                    <h2 class="service-main-title">買取・販売事業</h2>
-                    <p class="service-main-subtitle">Luxury Goods Purchase & Sales Service</p>
+            <div class="process-header">
+                <p class="process-label reveal">How We Work</p>
+                <h2 class="process-title reveal">サービスの流れ</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-item reveal reveal-delay-1">
+                    <p class="process-num">01</p>
+                    <h4>ヒアリング</h4>
+                    <p>現状分析と課題の明確化</p>
                 </div>
-                <div class="service-main-body">
-                    <p class="service-description">
-                        ブランド品、高級時計、ジュエリーなどの高価買取から、厳選されたアイテムのオンライン販売まで。
-                        専門の鑑定士が適正価格で査定・買取し、品質にこだわった商品をオンラインストアで販売しています。
-                        売りたい方にも買いたい方にも、安心と信頼のサービスをお届けします。
-                    </p>
-
-                    <div class="store-cta" style="text-align: center; margin: 2rem 0;">
-                        <a href="https://maison.k-honest.com/" target="_blank" class="store-button" style="display: inline-block; background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: white; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(111, 187, 211, 0.3);">
-                            オンラインストアを見る →
-                        </a>
-                    </div>
-
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">💎</div>
-                            <div class="feature-title">高額査定</div>
-                            <p>市場価値に基づく適正価格での買取</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">⚡</div>
-                            <div class="feature-title">即日現金化</div>
-                            <p>査定後、その場で現金お支払い</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🛒</div>
-                            <div class="feature-title">オンライン販売</div>
-                            <p>厳選アイテムをネットで購入可能</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✅</div>
-                            <div class="feature-title">品質保証</div>
-                            <p>鑑定士が厳選した確かな品質</p>
-                        </div>
-                    </div>
-
-                    <div class="service-process">
-                        <h3 class="process-title">買取の流れ</h3>
-                        <div class="process-steps">
-                            <div class="process-step">
-                                <div class="step-number">1</div>
-                                <div class="step-title">お問い合わせ</div>
-                                <p>電話・メールでご相談</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">2</div>
-                                <div class="step-title">査定</div>
-                                <p>無料査定で価格提示</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">3</div>
-                                <div class="step-title">ご検討</div>
-                                <p>査定額をご確認</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">4</div>
-                                <div class="step-title">お支払い</div>
-                                <p>即日現金でお支払い</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-examples">
-                        <h3 class="examples-title">取扱品目</h3>
-                        <div class="example-list">
-                            <div class="example-item">
-                                <h4>ブランドバッグ</h4>
-                                <p>エルメス、シャネル、ルイヴィトン等</p>
-                            </div>
-                            <div class="example-item">
-                                <h4>高級時計</h4>
-                                <p>ロレックス、オメガ、パテックフィリップ等</p>
-                            </div>
-                            <div class="example-item">
-                                <h4>ジュエリー</h4>
-                                <p>ダイヤモンド、金、プラチナ製品等</p>
-                            </div>
-                            <div class="example-item">
-                                <h4>その他高級品</h4>
-                                <p>アクセサリー、貴金属、美術品等</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="process-item reveal reveal-delay-2">
+                    <p class="process-num">02</p>
+                    <h4>ご提案</h4>
+                    <p>最適なソリューションの策定</p>
+                </div>
+                <div class="process-item reveal reveal-delay-3">
+                    <p class="process-num">03</p>
+                    <h4>実行</h4>
+                    <p>戦略の実行と伴走支援</p>
+                </div>
+                <div class="process-item reveal reveal-delay-4">
+                    <p class="process-num">04</p>
+                    <h4>検証</h4>
+                    <p>成果測定と継続的改善</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 営業サポート事業 -->
-    <section id="sales-support" class="service-detail">
-        <div class="container">
-            <div class="service-main-card animate-on-scroll">
-                <div class="service-main-header">
-                    <span class="service-number">02</span>
-                    <h2 class="service-main-title">営業サポート事業</h2>
-                    <p class="service-main-subtitle">Sales Support Service</p>
-                </div>
-                <div class="service-main-body">
-                    <p class="service-description">
-                        中小企業の営業力強化をトータルサポート。経験豊富な営業プロフェッショナルが、
-                        お客様の営業戦略立案から実行まで、包括的な支援を提供します。
-                        新規開拓、既存顧客の深耕、営業プロセスの最適化まで、あらゆる営業課題に対応します。
-                    </p>
-
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">📊</div>
-                            <div class="feature-title">営業戦略立案</div>
-                            <p>市場分析に基づく効果的な営業戦略の策定</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🎯</div>
-                            <div class="feature-title">新規開拓支援</div>
-                            <p>ターゲット企業へのアプローチから商談まで</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">📈</div>
-                            <div class="feature-title">営業プロセス改善</div>
-                            <p>効率的な営業フローの構築と改善</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">👥</div>
-                            <div class="feature-title">営業研修</div>
-                            <p>営業スキル向上のための実践的研修</p>
-                        </div>
-                    </div>
-
-                    <div class="service-process">
-                        <h3 class="process-title">サービスの流れ</h3>
-                        <div class="process-steps">
-                            <div class="process-step">
-                                <div class="step-number">1</div>
-                                <div class="step-title">ヒアリング</div>
-                                <p>現状分析と課題抽出</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">2</div>
-                                <div class="step-title">戦略立案</div>
-                                <p>最適な営業戦略の策定</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">3</div>
-                                <div class="step-title">実行支援</div>
-                                <p>戦略の実行と伴走支援</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">4</div>
-                                <div class="step-title">効果測定</div>
-                                <p>成果の検証と改善提案</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-examples">
-                        <h3 class="examples-title">導入実績</h3>
-                        <div class="example-list">
-                            <div class="example-item">
-                                <h4>IT企業A社</h4>
-                                <p>新規開拓により売上150%達成</p>
-                            </div>
-                            <div class="example-item">
-                                <h4>製造業B社</h4>
-                                <p>営業プロセス改善で効率30%向上</p>
-                            </div>
-                            <div class="example-item">
-                                <h4>サービス業C社</h4>
-                                <p>営業研修により成約率20%アップ</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- アライアンス事業 -->
-    <section id="alliance" class="service-detail">
-        <div class="container">
-            <div class="service-main-card animate-on-scroll">
-                <div class="service-main-header">
-                    <span class="service-number">03</span>
-                    <h2 class="service-main-title">アライアンス事業</h2>
-                    <p class="service-main-subtitle">Strategic Alliance Service</p>
-                </div>
-                <div class="service-main-body">
-                    <p class="service-description">
-                        企業間の戦略的提携をコーディネート。異業種・同業種問わず、
-                        シナジーを生み出す最適なパートナーシップを構築します。
-                        事業拡大、新市場開拓、技術連携など、様々な目的に応じたアライアンスを実現します。
-                    </p>
-
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">🤝</div>
-                            <div class="feature-title">パートナーマッチング</div>
-                            <p>最適な提携先の発掘とマッチング</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">📝</div>
-                            <div class="feature-title">契約交渉支援</div>
-                            <p>Win-Winな契約条件の調整</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🚀</div>
-                            <div class="feature-title">事業開発</div>
-                            <p>共同事業の企画・推進支援</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🌐</div>
-                            <div class="feature-title">ネットワーク構築</div>
-                            <p>持続的な事業連携の仕組み作り</p>
-                        </div>
-                    </div>
-
-                    <div class="service-process">
-                        <h3 class="process-title">アライアンス構築プロセス</h3>
-                        <div class="process-steps">
-                            <div class="process-step">
-                                <div class="step-number">1</div>
-                                <div class="step-title">戦略策定</div>
-                                <p>提携目的と方針の明確化</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">2</div>
-                                <div class="step-title">パートナー選定</div>
-                                <p>候補企業の調査と評価</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">3</div>
-                                <div class="step-title">交渉・契約</div>
-                                <p>条件交渉と契約締結</p>
-                            </div>
-                            <div class="process-step">
-                                <div class="step-number">4</div>
-                                <div class="step-title">実行・管理</div>
-                                <p>提携事業の推進と管理</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-examples">
-                        <h3 class="examples-title">成功事例</h3>
-                        <div class="example-list">
-                            <div class="example-item">
-                                <h4>技術提携</h4>
-                                <p>AI企業とメーカーの技術連携を実現</p>
-                            </div>
-                            <div class="example-item">
-                                <h4>販売提携</h4>
-                                <p>異業種間での相互送客スキーム構築</p>
-                            </div>
-                            <div class="example-item">
-                                <h4>海外展開</h4>
-                                <p>現地企業との合弁事業立ち上げ支援</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">ビジネスの成長をサポートします</h2>
-            <p class="cta-description">
-                お客様のニーズに合わせた最適なソリューションをご提案いたします
-            </p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn-white">お問い合わせ</a>
-                <a href="tel:03-4500-3763" class="btn-white">📞 03-4500-3763</a>
+            <h2 class="cta-title reveal">お気軽にご相談ください</h2>
+            <p class="cta-text reveal">サービスに関するご質問・ご相談を承っております</p>
+            <div class="cta-buttons reveal">
+                <a href="contact.html" class="btn btn-primary">CONTACT</a>
+                <a href="tel:03-4500-3763" class="btn btn-outline">03-4500-3763</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <img src="Honestロゴ (2).png" alt="Honest" style="height: 60px; margin-bottom: 1rem; filter: brightness(0) invert(1); opacity: 0.9;">
-                <p style="margin-top: 1rem; opacity: 0.8; line-height: 1.8;">
-                    誠実さと透明性を基盤に、<br>
-                    日本の伝統的な商道徳を大切にしながら、<br>
-                    革新的なビジネスソリューションを提供します。
-                </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Honest</span>
+                    <p>誠実と透明性を大切に、<br>お客様との信頼関係を築きます。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="message.html">代表メッセージ</a></li>
+                        <li><a href="services.html">事業内容</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#purchase">買取・販売事業</a></li>
+                        <li><a href="#sales-support">営業サポート</a></li>
+                        <li><a href="#alliance">アライアンス事業</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                        <li><a href="https://maison.k-honest.com" target="_blank">オンラインストア</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-section">
-                <h4>サービス</h4>
-                <ul>
-                    <li><a href="services.html#purchase">買取・販売事業</a></li>
-                    <li><a href="services.html#sales">営業サポート事業</a></li>
-                    <li><a href="services.html#alliance">アライアンス事業</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2024 合同会社Honest. All rights reserved.</p>
+                <p>古物商許可番号: 第304362420799号</p>
             </div>
-
-            <div class="footer-section">
-                <h4>企業情報</h4>
-                <ul>
-                    <li><a href="about.html">会社概要</a></li>
-                    <li><a href="message.html">代表挨拶</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>お問い合わせ</h4>
-                <p style="opacity: 0.8; line-height: 1.8;">
-                    〒169-0072<br class="mobile-break">
-                    東京都新宿区大久保2-19-15<br class="mobile-break">
-                    TEL: 03-4500-3763<br class="mobile-break">
-                    Email: info@k-honest.com
-                </p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 合同会社Honest. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Reveal Animation
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Parallax on service panels
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+
+            // Parallax effect
+            document.querySelectorAll('.service-panel-bg').forEach(bg => {
+                const rect = bg.parentElement.getBoundingClientRect();
+                const scrolled = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+                if (scrolled > 0 && scrolled < 1) {
+                    bg.style.transform = `translateY(${scrolled * 50}px) scale(1.1)`;
+                }
+            });
+        });
+
+        // Mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
