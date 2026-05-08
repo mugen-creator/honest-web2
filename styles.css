@@ -805,6 +805,20 @@ textarea.form-control {
     color: white;
 }
 
+.footer-tagline {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.footer-tagline-text {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 32px;

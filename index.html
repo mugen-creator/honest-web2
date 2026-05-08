@@ -214,6 +214,7 @@
             border-left: 1px solid rgba(255,255,255,0.08);
             position: relative;
             transition: all 0.5s ease;
+            text-align: left;
         }
 
         .philosophy-item:first-child {
@@ -238,24 +239,42 @@
 
         .philosophy-num {
             font-family: var(--font-display);
-            font-size: 11px;
+            font-size: 13px;
             letter-spacing: 3px;
-            opacity: 0.3;
-            margin-bottom: 48px;
+            opacity: 0.6;
+            margin-bottom: 40px;
         }
 
         .philosophy-title {
             font-family: var(--font-serif);
-            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-size: clamp(1.625rem, 2.6vw, 2.125rem);
             font-weight: 500;
             margin-bottom: 24px;
             line-height: 1.4;
+            color: white;
         }
 
         .philosophy-desc {
-            font-size: 14px;
-            line-height: 2;
-            opacity: 0.5;
+            font-size: 16px;
+            line-height: 2.1;
+            opacity: 0.85;
+        }
+
+        .philosophy-cta {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .philosophy-section .btn-outline {
+            color: white;
+            border-color: rgba(255,255,255,0.4);
+            background: transparent;
+        }
+
+        .philosophy-section .btn-outline:hover {
+            background: white;
+            color: #0a0a0a;
+            border-color: white;
         }
 
         /* About - Dramatic Split */
@@ -591,13 +610,13 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-            <p class="hero-subtitle">SANPO-YOSHI PHILOSOPHY</p>
+            <p class="hero-subtitle">BE HONEST. STAY HONEST.</p>
             <h1 class="hero-title">
                 誠実さで、<br>時代をつなぐ。
             </h1>
             <p class="hero-description">
-                売り手良し、買い手良し、世間良し。<br>
-                数百年の時を経てなお色褪せない、日本の商道徳を受け継ぐ。
+                数字の奥にある、人の想いを扱う。<br>
+                会社ではなく、人で選ばれる商売を。
             </p>
             <div class="hero-buttons">
                 <a href="about.html" class="btn btn-primary">EXPLORE</a>
@@ -623,20 +642,23 @@
         </div>
         <div class="philosophy-grid">
             <div class="philosophy-item reveal reveal-delay-1">
-                <p class="philosophy-num">01 — PAST</p>
-                <h3 class="philosophy-title">歴史から学ぶ</h3>
-                <p class="philosophy-desc">江戸時代の近江商人が掲げた「三方良し」。数百年の時を経てなお色褪せない商道徳を、私たちは現代に受け継ぎます。</p>
+                <p class="philosophy-num">01 — MISSION</p>
+                <h3 class="philosophy-title">人で選ばれる</h3>
+                <p class="philosophy-desc">会社ではなく、人で選ばれる会社へ。その積み重ねが、Honestを残していく。</p>
             </div>
             <div class="philosophy-item reveal reveal-delay-2">
-                <p class="philosophy-num">02 — PRESENT</p>
-                <h3 class="philosophy-title">今に誠実である</h3>
-                <p class="philosophy-desc">目の前の取引一つひとつに全力で向き合う。透明性のある対応で、お客様との信頼を積み重ねていきます。</p>
+                <p class="philosophy-num">02 — VISION</p>
+                <h3 class="philosophy-title">想いまで届く</h3>
+                <p class="philosophy-desc">モノだけでなく、想いまで届く商売を。それを業界の常識にしていく。</p>
             </div>
             <div class="philosophy-item reveal reveal-delay-3">
-                <p class="philosophy-num">03 — FUTURE</p>
-                <h3 class="philosophy-title">時代に恥じない仕事を</h3>
-                <p class="philosophy-desc">100年後の世間に恥じない商いを。短期的な利益ではなく、持続可能な価値の創造を目指します。</p>
+                <p class="philosophy-num">03 — VALUE</p>
+                <h3 class="philosophy-title">誠実に向き合う</h3>
+                <p class="philosophy-desc">問い、汲み取り、向き合う。三つの姿勢で、人と仕事に誠実であり続ける。</p>
             </div>
+        </div>
+        <div class="philosophy-cta reveal">
+            <a href="about.html" class="btn btn-outline">もっと詳しく</a>
         </div>
     </section>
 
@@ -750,6 +772,10 @@
                         <li><a href="https://maison.k-honest.com" target="_blank">オンラインストア</a></li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="footer-tagline">
+                <p class="footer-tagline-text">Be Honest. Stay Honest.</p>
             </div>
 
             <div class="footer-bottom">

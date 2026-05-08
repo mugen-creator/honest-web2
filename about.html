@@ -162,7 +162,7 @@
         .philosophy-content {
             position: relative;
             z-index: 1;
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -177,9 +177,9 @@
         }
 
         .philosophy-intro {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 2.4;
-            opacity: 0.8;
+            opacity: 0.85;
             margin-bottom: 100px;
             text-align: center;
         }
@@ -194,7 +194,16 @@
         .philosophy-item {
             padding: 60px 40px;
             border-left: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
+            text-align: left;
+        }
+
+        .philosophy-lead {
+            font-family: var(--font-serif);
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+            line-height: 1.8;
+            margin: 0 0 20px 0;
         }
 
         .philosophy-item:first-child {
@@ -203,30 +212,61 @@
 
         .philosophy-num {
             font-family: var(--font-display);
-            font-size: 11px;
+            font-size: 13px;
             letter-spacing: 3px;
-            opacity: 0.3;
+            opacity: 0.6;
             margin-bottom: 32px;
         }
 
         .philosophy-item-title {
             font-family: var(--font-serif);
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: clamp(1.75rem, 2.8vw, 2.25rem);
+            margin-bottom: 28px;
             font-weight: 500;
         }
 
         .philosophy-item-text {
-            font-size: 14px;
-            line-height: 2;
-            opacity: 0.6;
+            font-size: 17px;
+            line-height: 2.2;
+            opacity: 0.9;
+        }
+
+        .philosophy-item-text strong {
+            font-weight: 600;
+            color: white;
+            margin-right: 0.5em;
+        }
+
+        .value-list {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 18px 20px;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .value-list dt {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            color: white;
+            font-size: 17px;
+            white-space: nowrap;
+            line-height: 1.6;
+        }
+
+        .value-list dd {
+            font-size: 15px;
+            opacity: 0.78;
+            margin: 0;
+            line-height: 1.7;
         }
 
         .philosophy-closing {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 2.4;
             text-align: center;
-            opacity: 0.8;
+            opacity: 0.85;
             padding-top: 80px;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
@@ -506,36 +546,48 @@
         <div class="philosophy-bg-text">PHILOSOPHY</div>
         <div class="philosophy-content">
             <h2 class="philosophy-catch reveal">
-                誠実さで、時代をつなぐ。
+                「あなただから」と、<br>
+                選ばれ続ける会社へ。
             </h2>
 
             <p class="philosophy-intro reveal">
-                「三方良し」——売り手良し、買い手良し、世間良し。<br>
-                江戸時代の近江商人が築いた商道徳であり、数百年の時を経てなお色褪せない、<br>
-                日本が世界に誇るビジネスの哲学です。
+                私たちが大切にしているのは、目の前の一人ひとりとの関係。<br>
+                会社ではなく、人で選ばれる。<br>
+                その積み重ねが、Honestをつくっていきます。
             </p>
 
             <div class="philosophy-grid">
                 <div class="philosophy-item reveal reveal-delay-1">
-                    <p class="philosophy-num">01 — PAST</p>
-                    <h3 class="philosophy-item-title">歴史から学ぶ</h3>
-                    <p class="philosophy-item-text">先人たちが命がけで守り抜いた「誠実さ」という価値観を、私たちは受け継ぎます。</p>
+                    <p class="philosophy-num">01 — MISSION</p>
+                    <h3 class="philosophy-item-title">使命</h3>
+                    <p class="philosophy-lead">「あなただから」と、<br>選ばれ続ける会社へ。</p>
+                    <p class="philosophy-item-text">会社ではなく、人で選ばれる。その積み重ねが、Honestを残していく。</p>
                 </div>
                 <div class="philosophy-item reveal reveal-delay-2">
-                    <p class="philosophy-num">02 — PRESENT</p>
-                    <h3 class="philosophy-item-title">今に誠実である</h3>
-                    <p class="philosophy-item-text">目の前の一つひとつの取引に、全力で誠実であり続けます。</p>
+                    <p class="philosophy-num">02 — VISION</p>
+                    <h3 class="philosophy-item-title">目指す未来</h3>
+                    <p class="philosophy-lead">モノだけでなく、<br>想いまで届く商売を。</p>
+                    <p class="philosophy-item-text">数字の奥にある、人の想いを扱う仕事。それを業界の常識にしていく。</p>
                 </div>
                 <div class="philosophy-item reveal reveal-delay-3">
-                    <p class="philosophy-num">03 — FUTURE</p>
-                    <h3 class="philosophy-item-title">時代に恥じない仕事を</h3>
-                    <p class="philosophy-item-text">100年後の世間に恥じない商いをすることが、Honestの存在意義です。</p>
+                    <p class="philosophy-num">03 — VALUE</p>
+                    <h3 class="philosophy-item-title">行動指針</h3>
+                    <dl class="value-list">
+                        <dt>問う</dt>
+                        <dd>その仕事は、人のためになっているか。</dd>
+                        <dt>汲み取る</dt>
+                        <dd>どの立場の人の想いも。</dd>
+                        <dt>向き合う</dt>
+                        <dd>どんな時も、誠実に。</dd>
+                    </dl>
                 </div>
             </div>
 
             <p class="philosophy-closing reveal">
-                私たちが今日交わす約束が、明日の信頼になり、いつか歴史になる。<br>
-                <span class="highlight">それが、Honestの三方良しです。</span>
+                私たちのこの考え方の根っこには、<br>
+                近江商人から受け継ぐ「三方良し」の精神があります。<br>
+                <span class="highlight">売り手良し、買い手良し、世間良し。</span><br>
+                時代を超えて変わらない商道徳を、現代に受け継いでいきます。
             </p>
         </div>
     </section>
@@ -626,6 +678,10 @@
                         <li><a href="https://maison.k-honest.com" target="_blank">オンラインストア</a></li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="footer-tagline">
+                <p class="footer-tagline-text">Be Honest. Stay Honest.</p>
             </div>
 
             <div class="footer-bottom">
